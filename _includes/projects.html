@@ -5,14 +5,23 @@
       {% assign project_folder = item.folder %}
       <a href="{{ site.baseurl }}{{ item.url }}" class="project-link">
         <div class="project-card">
+          <!-- Image principale -->
           <img src="{{ site.baseurl }}/assets/images/projects/{{ project_folder }}/{{ item['main-image'] }}" alt="{{ item.title }} image">
+
+          <!-- Titre du projet -->
           <h3 class="project-title">{{ item.title }}</h3>
+
+          <!-- Compétences -->
           <div class="project-skills">
             {% for skill in item.skills %}
               <span class="skill">{{ skill }}</span>
             {% endfor %}
           </div>
+
+          <!-- Description -->
           <p class="project-description">{{ item.description }}</p>
+
+          <!-- Bouton Read More -->
           <button class="read-more">Read more →</button>
         </div>
       </a>
