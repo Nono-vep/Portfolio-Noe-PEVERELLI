@@ -33,13 +33,6 @@ You can put in multiple entries. All images will be at a fixed height in the sam
 
 ### Embedded images
 {% include image-gallery.html images='{{ site.baseurl }}/assets/images/projects/demo-project/project2.jpg' height='400' %}
-{% comment %}
-Pour ajouter d’autres images du projet, mets-les dans le même dossier :
-assets/images/projects/demo-project/
-Exemple : extra1.jpg, extra2.jpg
-Puis ajoute-les séparées par des virgules :
-{% include image-gallery.html images="/Portfolio-Noe-PEVERELLI/assets/images/projects/demo-project/project2.jpg,/Portfolio-Noe-PEVERELLI/assets/images/projects/demo-project/extra1.jpg" height="400" %}
-{% endcomment %}
 
 
 ## Embedding youtube video
