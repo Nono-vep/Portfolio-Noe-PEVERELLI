@@ -2,7 +2,7 @@
   <h2>Projects</h2>
   <div class="grid-container">
     {% for item in site.projects %}
-      {% assign project_folder = item.title | downcase | replace: " ", "-" %}
+      {% assign project_folder = item.folder %}
       <a href="{{ site.baseurl }}{{ item.url }}" class="project-link">
         <div class="project-card">
           <img src="{{ site.baseurl }}/assets/images/projects/{{ project_folder }}/{{ item['main-image'] }}" alt="{{ item.title }} image">
