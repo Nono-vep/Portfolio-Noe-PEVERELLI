@@ -31,9 +31,15 @@ Use this to have subsection if needed
 <span style="font-size: 10px">"Starship Test Flight Mission" from https://www.flickr.com/photos/spacex/52821641477/</span>  
 You can put in multiple entries. All images will be at a fixed height in the same row. With smaller window, they will switch to columns.  
 
-### Embeed images
+### Embedded images
 {% include image-gallery.html images="/Portfolio-Noe-PEVERELLI/assets/images/projects/demo-project/project2.jpg" height="400" %}
-place the images in project folder/images then update the file path.   
+{% comment %}
+Pour ajouter d’autres images du projet, mets-les dans le même dossier :
+assets/images/projects/demo-project/
+Exemple : extra1.jpg, extra2.jpg
+Puis ajoute-les séparées par des virgules :
+{% include image-gallery.html images="/Portfolio-Noe-PEVERELLI/assets/images/projects/demo-project/project2.jpg,/Portfolio-Noe-PEVERELLI/assets/images/projects/demo-project/extra1.jpg" height="400" %}
+{% endcomment %}
 
 
 ## Embedding youtube video
