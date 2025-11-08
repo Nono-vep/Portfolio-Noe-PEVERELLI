@@ -1,21 +1,16 @@
-<section id="projects" class="project-grid-section">
-  <h2>Projects</h2>
-  <div class="grid-container">
-    {% for item in site.projects %}
-      {% assign project_folder = item.title | downcase | replace: " ", "-" %}
-      <a href="{{ site.baseurl }}{{ item.url }}" class="project-link">
-        <div class="project-card">
-          <img src="{{ site.baseurl }}/assets/images/projects/{{ project_folder }}/{{ item['main-image'] }}" alt="{{ item.title }} image">
-          <h3 class="project-title">{{ item.title }}</h3>
-          <div class="project-skills">
-            {% for skill in item.skills %}
-              <span class="skill">{{ skill }}</span>
-            {% endfor %}
-          </div>
-          <p class="project-description">{{ item.description }}</p>
-          <button class="read-more">Read more →</button>
-        </div>
-      </a>
-    {% endfor %}
-  </div>
-</section>
+{% for item in site.projects %}
+  {% assign project_folder = item.title | downcase | replace: " ", "-" %}
+  <a href="{{ site.baseurl }}{{ item.url }}" class="project-link">
+    <div class="project-card">
+      <img src="{{ site.baseurl }}/assets/images/projects/{{ project_folder }}/{{ item['main-image'] }}" alt="{{ item.title }} image">
+      <h3 class="project-title">{{ item.title }}</h3>
+      <div class="project-skills">
+        {% for skill in item.skills %}
+          <span class="skill">{{ skill }}</span>
+        {% endfor %}
+      </div>
+      <p class="project-description">{{ item.description }}</p>
+      <button class="read-more">Read more →</button>
+    </div>
+  </a>
+{% endfor %}
