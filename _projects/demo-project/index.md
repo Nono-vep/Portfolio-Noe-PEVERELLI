@@ -1,5 +1,5 @@
 ---
-layout: wrapper
+layout: post
 folder : demo-project
 title: Super Heavy Booster Catch (Demo Only)
 description:  (I have never been employed by / affiliated with SpaceX. This is for demo use only) 
