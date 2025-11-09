@@ -10,7 +10,10 @@ skills:
   - PCB analysis
   - audio system design
 
-main-image: /sonos.png
+main-image: sonos.png
+
+{% include image-gallery.html images='sonos.jpg' height='400' %}
+
 ---
 
 # This is another demo
