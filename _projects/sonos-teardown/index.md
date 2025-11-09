@@ -24,4 +24,4 @@ Used for the title (already generated automatically at the top)
 Use this for the header of each section
 ### Header 3 
 Use this to have subsection if needed
-{% include image-gallery.html images='sonos.jpg' height='400' %}
+{% include image-gallery.html images='sonos.png' height='400' %}
