@@ -3,35 +3,38 @@ layout: wrapper
 ---
 
 <div class="post-view">
-    <div class="summary">
+  <div class="summary">
 
-        <!-- Image principale du projet -->
-        <img src="{{ site.baseurl }}/assets/images/projects/{{ page.folder }}/{{ page['main-image'] }}" alt="{{ page.title }} image">
+    <!-- Image principale du projet -->
+    <img src="{{ site.baseurl }}/assets/images/projects/{{ page.folder }}/{{ page['main-image'] }}" alt="{{ page.title }} image">
 
-        <!-- Titre du projet -->
-        <div class="title-header">
-            <h1>{{ page.title }}</h1>
-        </div>
-
-        <!-- Description du projet -->
-        <div class="project-description">
-            <h2>Project Overview</h2>
-            <p>{{ page.description }}</p>
-        </div>
-
-        <!-- Compétences utilisées -->
-        <div class="skills-card">
-            <h2>Skills Used</h2> 
-            <div class="skills-list">
-                {% for skill in page.skills %}
-                <span class="skill">{{ skill }}</span>    
-                {% endfor %}
-            </div>
-        </div>
+    <!-- Titre du projet -->
+    <div class="title-header">
+      <h1>{{ page.title }}</h1>
     </div>
 
-    <!-- Contenu du projet (texte, galerie, vidéos, etc.) -->
-    <div class="content">
-        {{ content }}
+    <!-- Description du projet -->
+    <div class="project-description">
+      <h2>Project Overview</h2>
+      <p>{{ page.description }}</p>
     </div>
+
+    <!-- Compétences utilisées -->
+    {% if page.skills %}
+    <div class="skills-card">
+      <h2>Skills Used</h2>
+      <div class="skills-list">
+        {% for skill in page.skills %}
+          <span class="skill">{{ skill }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <!-- Contenu principal du projet (texte, galerie, vidéos, etc.) -->
+  <div class="content">
+    {{ content }}
+  </div>
 </div>
