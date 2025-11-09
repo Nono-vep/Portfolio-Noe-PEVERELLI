@@ -1,0 +1,24 @@
+/* ======================================= */
+/* Image Gallery Responsive pour les projets */
+/* ======================================= */
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px; /* espace entre les images */
+  align-items: stretch;
+  margin: 20px 0;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: var(--gallery-height, 300px); /* hauteur par défaut ou définie via include */
+  object-fit: cover; /* recadrage pour garder la proportion et remplir le bloc */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
