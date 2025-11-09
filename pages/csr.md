@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "CSR and Civic Engagement"
 permalink: /csr/
 ---
