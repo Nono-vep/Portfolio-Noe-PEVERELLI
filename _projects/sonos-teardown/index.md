@@ -12,9 +12,16 @@ skills:
 
 main-image: sonos.png
 
-{% include image-gallery.html images='sonos.jpg' height='400' %}
 
 ---
 
 # This is another demo
 
+---
+# Header 1 
+Used for the title (already generated automatically at the top)
+## Header 2  
+Use this for the header of each section
+### Header 3 
+Use this to have subsection if needed
+{% include image-gallery.html images='sonos.jpg' height='400' %}
