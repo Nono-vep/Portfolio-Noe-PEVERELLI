@@ -5,8 +5,8 @@ layout: wrapper
 <div class="post-view">
   <div class="summary">
 
-    <!-- Image principale du projet -->
-    <img src="{{ site.baseurl }}/assets/images/projects/{{ page.folder }}/{{ page['main-image'] }}" alt="{{ page.title }} image">
+    <!-- Image principale du projet (affichée en entier avec image-gallery) -->
+    {% include image-gallery.html images=page.main-image mode="full" %}
 
     <!-- Titre du projet -->
     <div class="title-header">
@@ -33,7 +33,7 @@ layout: wrapper
 
   </div>
 
-  <!-- Contenu principal du projet (texte, galerie, vidéos, etc.) -->
+  <!-- Contenu principal du projet -->
   <div class="content">
     {{ content }}
   </div>
