@@ -1,8 +1,18 @@
 ---
 layout: post
-title: "Nom du Projet 1"
+title: "Induction Motor Kart"
 folder: "new-project-1"
 main-image: "project2.jpg"
-categories: ["International"]
+categories: ["Project"]
 ---
-Description du projet 1 ici.
+During this project, we worked on three parts of the kart : 
+- Command
+- Motor drive
+- Motor transmission
+
+At the end, the kart didn't work because of a problem on the transmission part and we didn't have enough time to correct it. 
+
+What I learned : 
+
+
+
