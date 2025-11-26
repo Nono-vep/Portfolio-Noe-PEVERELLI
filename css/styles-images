@@ -10,15 +10,27 @@
   margin: 20px 0;
 }
 
-.image-gallery img {
+/* MODE PAR DÉFAUT = cover (comme maintenant) */
+.image-gallery img.cover {
   width: 100%;
-  height: var(--gallery-height, 300px); /* hauteur par défaut ou définie via include */
-  object-fit: cover; /* recadrage pour garder la proportion et remplir le bloc */
+  height: var(--gallery-height, 300px);
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
+/* MODE FULL = afficher l’image entière sans recadrage */
+.image-gallery img.full {
+  width: 100%;
+  height: auto;           /* ← garde les proportions naturelles */
+  object-fit: contain;    /* ← pas de crop */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover identique */
 .image-gallery img:hover {
   transform: scale(1.05);
 }
