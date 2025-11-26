@@ -2,9 +2,12 @@
 layout: post
 title: "Induction Motor Kart"
 folder: "project-1"
-main-image: "IMG_8821.jpeg"
 categories: ["Project"]
 ---
+
+{% include image-gallery.html images="IMG_8861.jpeg" mode="full" %}
+
+
 During this project, we worked on three parts of the kart : 
 - Command
 - Motor drive
