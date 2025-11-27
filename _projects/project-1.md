@@ -26,7 +26,7 @@ At the end, the kart didn't work because of a problem on the transmission part a
 
 What I learned : 
 
-{% include image-gallery.html images='IMG_8861.jpeg' mode='full' %}
+{% include image-gallery.html images='IMG_8861.jpeg' height="1000px" %}
 
 # Header 1 
 Used for the title (already generated automatically at the top)
