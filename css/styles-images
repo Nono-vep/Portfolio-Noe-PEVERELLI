@@ -22,8 +22,8 @@
 
 /* MODE FULL = afficher l’image entière sans recadrage */
 .image-gallery img.full {
-  width: 100%;
-  height: auto;           /* ← garde les proportions naturelles */
+  width: auto;
+  height: 100%;           /* ← garde les proportions naturelles */
   object-fit: contain;    /* ← pas de crop */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
