@@ -9,9 +9,7 @@ skills:
   - Motor Transmission
   - Electrical systems integration
   - Electrical Schematic 
-  - Welding
-  - Metal forming
-  - Thermal simulation
+  - Mechanical Calculus
 main-image: "IMG_8861.jpeg"
 categories: ["Project"]
 ---
@@ -22,11 +20,15 @@ During this project, we worked on three parts of the kart :
 2. Motor drive
 3. Motor transmission
 
+First we added a brake system on the kart :
+{% include image-gallery.html images='IMG_8861.jpeg' height="600" %}
+
+
 At the end, the kart didn't work because of a problem on the transmission part and we didn't have enough time to correct it. 
 
 What I learned : 
 
-{% include image-gallery.html images='IMG_8861.jpeg' height="600" %}
+{% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
 
 # Header 1 
 Used for the title (already generated automatically at the top)
@@ -71,17 +73,6 @@ this is how you input **bold text**
 ## Adding italic text
 Italicized text is the *cat's meow*.
 
-## Adding ordered list
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
-
-## Adding unordered list
-- First item
-- Second item
-- Third item
-- Fourth item
 
 ## Adding code block
 ```ruby
