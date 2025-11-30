@@ -1,127 +1,4 @@
-<div class="oscillo-container">
-    <canvas id="oscilloCanvas"></canvas>
-    </div>
 
-<style>
-    .oscillo-container {
-        position: relative;
-        width: 100%;
-        height: 200px; /* Tu peux réduire à 150px si c'est trop haut */
-        background-color: #ffffff; /* FOND BLANC */
-        overflow: hidden;
-        border-bottom: 1px solid #e0e0e0; /* Bordure grise discrète */
-        margin-bottom: 20px;
-    }
-
-    canvas#oscilloCanvas {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
-<script>
-(function() {
-    const canvas = document.getElementById('oscilloCanvas');
-    const ctx = canvas.getContext('2d');
-    
-    let width, height;
-    let time = 0;
-    let waveType = 0; // 0: Sinus, 1: Carré, 2: Triangle, 3: Dents de scie
-
-    // --- CONFIGURATION ---
-    const waveSpeed = 0.08;      // Vitesse ralentie (était 0.15)
-    const frequency = 0.03;      // Écartement des ondes (plus petit = ondes plus larges)
-    const amplitudeFactor = 0.7; // Hauteur du signal
-    const moveSpeed = 3;         // Vitesse de défilement horizontal (était 5)
-    
-    // Changement de forme d'onde toutes les 5 secondes
-    setInterval(() => {
-        waveType = (waveType + 1) % 4; // Modulo 4 pour inclure la dent de scie
-    }, 5000);
-
-    function resize() {
-        width = canvas.width = canvas.parentElement.offsetWidth;
-        height = canvas.height = canvas.parentElement.offsetHeight;
-    }
-    window.addEventListener('resize', resize);
-    resize();
-
-    function drawGrid() {
-        // Grille grise légère sur fond blanc
-        ctx.strokeStyle = "rgba(0, 0, 0, 0.05)"; 
-        ctx.lineWidth = 1;
-        const gridSize = 40;
-        
-        ctx.beginPath();
-        for (let x = 0; x <= width; x += gridSize) {
-            ctx.moveTo(x, 0); ctx.lineTo(x, height);
-        }
-        for (let y = 0; y <= height; y += gridSize) {
-            ctx.moveTo(0, y); ctx.lineTo(width, y);
-        }
-        ctx.stroke();
-    }
-
-    function getY(x, t) {
-        const centerY = height / 2;
-        const amp = (height / 2) * amplitudeFactor;
-        const angle = (x * frequency) - (t * moveSpeed);
-
-        let val = 0;
-
-        if (waveType === 0) { 
-            // SINUS
-            val = Math.sin(angle);
-        } else if (waveType === 1) { 
-            // CARRÉ
-            val = Math.sign(Math.sin(angle));
-        } else if (waveType === 2) { 
-            // TRIANGLE
-            val = (2 / Math.PI) * Math.asin(Math.sin(angle));
-        } else if (waveType === 3) {
-            // DENTS DE SCIE (Sawtooth)
-            // Formule mathématique robuste
-            let normalizedAngle = (angle / (2 * Math.PI)); 
-            val = 2 * (normalizedAngle - Math.floor(normalizedAngle + 0.5));
-        }
-        
-        return centerY + (val * amp);
-    }
-
-    function animate() {
-        // Effet de traînée sur fond BLANC (on remplit avec du blanc semi-transparent)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)'; 
-        ctx.fillRect(0, 0, width, height);
-
-        drawGrid();
-
-        ctx.beginPath();
-        ctx.lineWidth = 3; 
-        
-        // --- COULEUR DU TRAIT ---
-        ctx.strokeStyle = '#0056b3'; // Bleu ingénieur "pro"
-        // Tu peux mettre '#2962ff' pour un bleu plus électrique
-        
-        ctx.shadowBlur = 0; // Pas de flou néon pour garder le style propre sur fond blanc
-
-        // Dessin du signal
-        for (let x = 0; x < width; x++) {
-            // Petite optimisation : on ne calcule pas tous les pixels pour gagner en fluidité
-             // si l'écran est très large, mais ici pixel par pixel c'est plus joli.
-            const y = getY(x, time);
-            if (x === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-        
-        time += waveSpeed;
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-})();
-</script>
 <!-- SECTION 1: Hero -->
 <section class="hero-section">
     <div class="group">
@@ -218,3 +95,127 @@
     </div>
 </section>
 
+<div class="oscillo-container">
+    <canvas id="oscilloCanvas"></canvas>
+    </div>
+
+<style>
+    .oscillo-container {
+        position: relative;
+        width: 100%;
+        height: 200px; /* Tu peux réduire à 150px si c'est trop haut */
+        background-color: #ffffff; /* FOND BLANC */
+        overflow: hidden;
+        border-bottom: 1px solid #e0e0e0; /* Bordure grise discrète */
+        margin-bottom: 20px;
+    }
+
+    canvas#oscilloCanvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<script>
+(function() {
+    const canvas = document.getElementById('oscilloCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let width, height;
+    let time = 0;
+    let waveType = 0; // 0: Sinus, 1: Carré, 2: Triangle, 3: Dents de scie
+
+    // --- CONFIGURATION ---
+    const waveSpeed = 0.03;      // Vitesse ralentie (était 0.15)
+    const frequency = 0.03;      // Écartement des ondes (plus petit = ondes plus larges)
+    const amplitudeFactor = 0.7; // Hauteur du signal
+    const moveSpeed = 3;         // Vitesse de défilement horizontal (était 5)
+    
+    // Changement de forme d'onde toutes les 5 secondes
+    setInterval(() => {
+        waveType = (waveType + 1) % 4; // Modulo 4 pour inclure la dent de scie
+    }, 5000);
+
+    function resize() {
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function drawGrid() {
+        // Grille grise légère sur fond blanc
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.05)"; 
+        ctx.lineWidth = 1;
+        const gridSize = 40;
+        
+        ctx.beginPath();
+        for (let x = 0; x <= width; x += gridSize) {
+            ctx.moveTo(x, 0); ctx.lineTo(x, height);
+        }
+        for (let y = 0; y <= height; y += gridSize) {
+            ctx.moveTo(0, y); ctx.lineTo(width, y);
+        }
+        ctx.stroke();
+    }
+
+    function getY(x, t) {
+        const centerY = height / 2;
+        const amp = (height / 2) * amplitudeFactor;
+        const angle = (x * frequency) - (t * moveSpeed);
+
+        let val = 0;
+
+        if (waveType === 0) { 
+            // SINUS
+            val = Math.sin(angle);
+        } else if (waveType === 1) { 
+            // CARRÉ
+            val = Math.sign(Math.sin(angle));
+        } else if (waveType === 2) { 
+            // TRIANGLE
+            val = (2 / Math.PI) * Math.asin(Math.sin(angle));
+        } else if (waveType === 3) {
+            // DENTS DE SCIE (Sawtooth)
+            // Formule mathématique robuste
+            let normalizedAngle = (angle / (2 * Math.PI)); 
+            val = 2 * (normalizedAngle - Math.floor(normalizedAngle + 0.5));
+        }
+        
+        return centerY + (val * amp);
+    }
+
+    function animate() {
+        // Effet de traînée sur fond BLANC (on remplit avec du blanc semi-transparent)
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)'; 
+        ctx.fillRect(0, 0, width, height);
+
+        drawGrid();
+
+        ctx.beginPath();
+        ctx.lineWidth = 3; 
+        
+        // --- COULEUR DU TRAIT ---
+        ctx.strokeStyle = '#0056b3'; // Bleu ingénieur "pro"
+        // Tu peux mettre '#2962ff' pour un bleu plus électrique
+        
+        ctx.shadowBlur = 0; // Pas de flou néon pour garder le style propre sur fond blanc
+
+        // Dessin du signal
+        for (let x = 0; x < width; x++) {
+            // Petite optimisation : on ne calcule pas tous les pixels pour gagner en fluidité
+             // si l'écran est très large, mais ici pixel par pixel c'est plus joli.
+            const y = getY(x, time);
+            if (x === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        
+        time += waveSpeed;
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+})();
+</script>
