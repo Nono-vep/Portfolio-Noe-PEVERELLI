@@ -55,36 +55,42 @@
 </div>
 
 <style>
-    /* 1. LAYOUT HERO SIMPLE */
+    /* 1. LAYOUT HERO */
     .hero-section .group {
         display: flex;
         align-items: center; 
         justify-content: space-between;
-        gap: 30px; /* Espace équilibré */
+        gap: 30px; 
     }
 
     .hero-section .text {
-        flex: 1; /* Le texte prend toute la place dispo */
+        flex: 1; 
     }
 
-    /* CORRECTION DU TEXTE RATATINÉ */
+    /* FORCE LA TAILLE DU TEXTE */
+    /* On utilise !important pour être sûr d'écraser le style global */
     .hero-section .text h2 {
-        /* J'ai enlevé la taille fixe, il reprend sa taille normale */
-        margin-top: 0;
-        line-height: 1.2;
+        margin-top: 0 !important;
+        line-height: 1.2 !important;
+        font-size: 50px !important; /* Force une bonne taille si ça bug */
+        margin-bottom: 20px !important;
     }
 
-    /* CORRECTION IMAGE 300PX */
+    /* 2. FORCE L'IMAGE EN 300PX ROND */
+    /* Le sélecteur est plus précis (.hero-section .headshot img) pour gagner la priorité */
+    .hero-section .headshot img {
+        width: 300px !important;
+        height: 300px !important;
+        min-width: 300px !important; /* Empêche l'écrasement */
+        min-height: 300px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        aspect-ratio: 1/1 !important; /* Force le ratio carré */
+    }
+    
     .headshot {
-        flex: 0 0 auto; /* Empêche l'image de s'écraser */
-    }
-
-    .headshot img {
-        width: 300px;  /* Taille FIXE demandée */
-        height: 300px; /* Taille FIXE demandée */
-        object-fit: cover; /* Assure que l'image remplit bien le rond sans être déformée */
-        border-radius: 50%;
-        display: block;
+        flex: 0 0 auto !important;
+        display: block !important;
     }
 
     /* EFFET ZOOM SUR IMAGE */
@@ -97,7 +103,7 @@
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* BOUTON & OSCILLO (Inchangés car ça marchait bien) */
+    /* 3. OSCILLOSCOPE & BOUTON (Inchangés) */
     .arrow {
         text-align: center; 
         position: relative;
@@ -132,7 +138,6 @@
 
 <script>
 (function() {
-    // Force le retour en haut au rafraîchissement
     if (window.location.hash) {
         window.history.replaceState(null, null, window.location.pathname);
     }
@@ -141,7 +146,6 @@
     }
     window.scrollTo(0, 0);
 
-    // Code Oscilloscope
     const canvas = document.getElementById('oscilloCanvas');
     const ctx = canvas.getContext('2d');
     
