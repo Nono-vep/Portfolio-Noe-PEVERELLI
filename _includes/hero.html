@@ -2,7 +2,8 @@
     <div class="group">
         <div class="text">
             <h2>
-                I'm <br> <span class="typewriter">{{ site.name }}</span>
+                I'm <br>
+                <span class="typewriter">{{ site.name }}</span>
                 
                 {% if site.external-links %}
                 <span class="external-links">
@@ -54,37 +55,35 @@
 </div>
 
 <style>
-    /* 1. LAYOUT HERO */
+    /* 1. LAYOUT HERO SIMPLE */
     .hero-section .group {
         display: flex;
         align-items: center; 
         justify-content: space-between;
-        gap: 40px; /* Espace entre le texte et la photo */
+        gap: 30px; /* Espace équilibré */
     }
 
     .hero-section .text {
-        flex: 1;
+        flex: 1; /* Le texte prend toute la place dispo */
     }
 
-    /* 2. TAILLE DU TEXTE RÉDUITE */
+    /* CORRECTION DU TEXTE RATATINÉ */
     .hero-section .text h2 {
-        font-size: 2.8rem; /* Taille réduite (avant c'était énorme genre 50px+) */
-        line-height: 1.2;
+        /* J'ai enlevé la taille fixe, il reprend sa taille normale */
         margin-top: 0;
-        margin-bottom: 10px;
-        font-weight: 700;
+        line-height: 1.2;
     }
 
-    /* 3. TAILLE DE LA PHOTO RÉDUITE */
+    /* CORRECTION IMAGE 300PX */
     .headshot {
-        flex: 0 0 auto;
+        flex: 0 0 auto; /* Empêche l'image de s'écraser */
     }
 
     .headshot img {
-        width: 280px; /* Beaucoup plus petit (avant c'était ~400px) */
-        height: 280px;
-        object-fit: cover;
-        border-radius: 50%; /* Garde le rond parfait */
+        width: 300px;  /* Taille FIXE demandée */
+        height: 300px; /* Taille FIXE demandée */
+        object-fit: cover; /* Assure que l'image remplit bien le rond sans être déformée */
+        border-radius: 50%;
         display: block;
     }
 
@@ -98,7 +97,7 @@
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* RESTE DU STYLE (Bouton & Oscillo) */
+    /* BOUTON & OSCILLO (Inchangés car ça marchait bien) */
     .arrow {
         text-align: center; 
         position: relative;
