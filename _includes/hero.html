@@ -126,6 +126,24 @@
 
 <script>
 (function() {
+    <script>
+(function() {
+    // --- NOUVEAU CODE : FORCE LE RETOUR EN HAUT AU RAFRAÎCHISSEMENT ---
+    
+    // 1. Si on détecte un # dans l'url (ex: #projects), on le nettoie sans recharger
+    if (window.location.hash) {
+        window.history.replaceState(null, null, window.location.pathname);
+    }
+
+    // 2. On force le scroll en haut immédiat
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+    
+    // --- FIN NOUVEAU CODE ---
+
+
     const canvas = document.getElementById('oscilloCanvas');
     const ctx = canvas.getContext('2d');
     
