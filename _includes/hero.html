@@ -61,39 +61,66 @@
         align-items: center; 
         justify-content: space-between;
         gap: 30px; 
+        margin-bottom: 10px; /* Réduit l'espace sous le texte */
     }
 
     .hero-section .text {
         flex: 1; 
     }
 
-    /* FORCE LA TAILLE DU TEXTE */
-    /* On utilise !important pour être sûr d'écraser le style global */
+    /* TITRE */
     .hero-section .text h2 {
         margin-top: 0 !important;
         line-height: 1.2 !important;
-        font-size: 50px !important; /* Force une bonne taille si ça bug */
+        font-size: 50px !important; 
         margin-bottom: 20px !important;
     }
 
-    /* 2. FORCE L'IMAGE EN 300PX ROND */
-    /* Le sélecteur est plus précis (.hero-section .headshot img) pour gagner la priorité */
+    /* --- CORRECTION TYPEWRITER --- */
+    .typewriter {
+        display: inline-block;
+        overflow: hidden; 
+        border-right: .15em solid #333; /* Le curseur */
+        white-space: nowrap; 
+        margin: 0;
+        width: 0; /* Commence à 0 */
+        
+        /* Animation : 
+           1. typing : dure 1.5s, en 14 étapes (nb caractères approx), et reste à la fin (forwards) 
+           2. blink : clignotement infini
+        */
+        animation: 
+            typing 1.5s steps(14, end) forwards,
+            blink-caret .75s step-end infinite;
+    }
+
+    /* L'animation va de 0 à 14 caractères (ch) */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 14ch; } 
+    }
+    
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #333; }
+    }
+
+
+    /* 2. IMAGE (Rond parfait 300px) */
     .hero-section .headshot img {
         width: 300px !important;
         height: 300px !important;
-        min-width: 300px !important; /* Empêche l'écrasement */
+        min-width: 300px !important; 
         min-height: 300px !important;
         object-fit: cover !important;
         border-radius: 50% !important;
-        aspect-ratio: 1/1 !important; /* Force le ratio carré */
+        aspect-ratio: 1/1 !important; 
     }
     
     .headshot {
         flex: 0 0 auto !important;
         display: block !important;
     }
-
-    /* EFFET ZOOM SUR IMAGE */
     .hover-zoom {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
@@ -103,11 +130,12 @@
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* 3. OSCILLOSCOPE & BOUTON (Inchangés) */
+    /* 3. BOUTON REMONTÉ */
     .arrow {
         text-align: center; 
         position: relative;
         z-index: 10; 
+        margin-top: -10px; /* Marge négative pour le remonter vers le texte */
         margin-bottom: 0;
     }
     .arrow a {
@@ -116,6 +144,7 @@
         background: white; 
         padding: 5px 10px;
         border-radius: 10px;
+        display: inline-block;
     }
 
     .oscillo-container {
