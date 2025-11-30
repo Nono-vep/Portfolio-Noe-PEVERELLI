@@ -68,10 +68,21 @@ function showSlides(n) {
 
 <script src="https://unpkg.com/scrollreveal"></script>
 
+<script src="https://unpkg.com/scrollreveal"></script>
+
 <script>
-    // Configuration de l'apparition
-    ScrollReveal().reveal('.hero-section', { delay: 200, distance: '50px', origin: 'bottom', duration: 1000 });
-    ScrollReveal().reveal('.project-card', { delay: 200, distance: '50px', origin: 'bottom', interval: 200 }); // interval crée un effet de cascade
-    ScrollReveal().reveal('.skill-category', { delay: 200, distance: '30px', origin: 'left', interval: 100 });
-    ScrollReveal().reveal('.contact-section', { delay: 200, distance: '50px', origin: 'bottom' });
+    // Configuration de l'apparition avec RESET: TRUE
+    // reset: true permet de rejouer l'animation à chaque passage
+    const revealOption = {
+        delay: 200,
+        distance: '50px',
+        origin: 'bottom',
+        duration: 1000,
+        reset: true  // <--- C'est la ligne magique !
+    };
+
+    ScrollReveal().reveal('.hero-section', revealOption);
+    ScrollReveal().reveal('.project-card', { ...revealOption, interval: 200 }); 
+    ScrollReveal().reveal('.skill-category', { ...revealOption, origin: 'left', interval: 100 });
+    ScrollReveal().reveal('.contact-section', revealOption);
 </script>
