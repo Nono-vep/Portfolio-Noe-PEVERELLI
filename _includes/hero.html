@@ -61,9 +61,8 @@
         align-items: center; 
         justify-content: space-between;
         gap: 30px; 
-        margin-bottom: 0px; /* On réduit la marge du bas de la section */
+        margin-bottom: 0px;
     }
-
     .hero-section .text { flex: 1; }
 
     /* TITRE FORCE */
@@ -74,7 +73,7 @@
         margin-bottom: 20px !important;
     }
 
-    /* TYPEWRITER */
+    /* TYPEWRITER (Machine à écrire) */
     .typewriter {
         display: inline-block;
         overflow: hidden; 
@@ -84,10 +83,10 @@
         width: 0;
         animation: typing 1.5s steps(13, end) forwards, blink-caret .75s step-end infinite;
     }
-    @keyframes typing { from { width: 0 } to { width: 11.5ch; } } /* Ajusté à 9.5ch pour ton nom */
+    @keyframes typing { from { width: 0 } to { width: 9.5ch; } }
     @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #333; } }
 
-    /* 2. IMAGE FORCEE */
+    /* 2. IMAGE (300px Rond parfait) */
     .hero-section .headshot img {
         width: 300px !important; height: 300px !important;
         min-width: 300px !important; min-height: 300px !important;
@@ -99,36 +98,49 @@
     .hover-zoom { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
     .hover-zoom:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 
-    /* 3. REGLAGE INDÉPENDANT DES ESPACES */
-    
-    /* LE BOUTON : On le remonte vers le texte */
+    /* 3. ESPACEMENT BOUTON / OSCILLO */
     .arrow {
-        text-align: center; 
-        position: relative;
-        z-index: 10; 
-        margin-top: -30px; /* C'est ça qui le remonte près du texte */
-        margin-bottom: 0;
+        text-align: center; position: relative; z-index: 10; 
+        margin-top: -30px; margin-bottom: 0;
     }
     .arrow a {
         text-decoration: none; color: inherit;
-        background: white; padding: 5px 10px; border-radius: 10px;
-        display: inline-block;
+        background: white; padding: 5px 10px; border-radius: 10px; display: inline-block;
     }
 
-    /* L'OSCILLOGRAMME : On le descend loin du bouton */
     .oscillo-container {
-        position: relative;
-        width: 100%;
-        height: 200px; 
-        background-color: #ffffff;
-        overflow: hidden;
-        border-bottom: 1px solid #e0e0e0;
-        
-        margin-top: 60px; /* C'est ça qui crée l'espace VIDE entre le bouton et l'onde */
-        z-index: 1; 
+        position: relative; width: 100%; height: 200px; 
+        background-color: #ffffff; overflow: hidden; border-bottom: 1px solid #e0e0e0;
+        margin-top: 60px; z-index: 1; 
     }
-
     canvas#oscilloCanvas { display: block; width: 100%; height: 100%; }
+
+    /* =========================================
+       FIX MOBILE : C'est ici que la magie opère
+       ========================================= */
+    @media (max-width: 768px) {
+        /* Force le texte à s'afficher normalement (bloc) et pas à l'envers */
+        .hero-section .text h2 {
+            display: block !important;
+            flex-direction: row !important; 
+        }
+        
+        /* Ajuste la taille du titre sur mobile pour que ça rentre */
+        .hero-section .text h2 {
+            font-size: 35px !important;
+        }
+
+        /* On s'assure que la photo passe au dessus du texte (standard mobile) */
+        .hero-section .group {
+            flex-direction: column-reverse !important;
+            text-align: center;
+        }
+
+        /* On centre le typewriter sur mobile */
+        .typewriter {
+            margin: 0 auto;
+        }
+    }
 </style>
 
 <script>
