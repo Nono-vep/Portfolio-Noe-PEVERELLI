@@ -65,3 +65,13 @@ function showSlides(n) {
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    // Configuration de l'apparition
+    ScrollReveal().reveal('.hero-section', { delay: 200, distance: '50px', origin: 'bottom', duration: 1000 });
+    ScrollReveal().reveal('.project-card', { delay: 200, distance: '50px', origin: 'bottom', interval: 200 }); // interval crée un effet de cascade
+    ScrollReveal().reveal('.skill-category', { delay: 200, distance: '30px', origin: 'left', interval: 100 });
+    ScrollReveal().reveal('.contact-section', { delay: 200, distance: '50px', origin: 'bottom' });
+</script>
