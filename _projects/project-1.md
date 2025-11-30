@@ -29,8 +29,23 @@ After that, we studied the motor drive and how to command it :
 With the datasheet, we drew the electrical diagram and we implement it on the kart :
 {% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
 
+Pour ajouter une vidéo :
+<video width="100%" controls muted loop style="border-radius: 8px;">
+  <source src="lien_vers_ta_video.mp4" type="video/mp4">
+  Ton navigateur ne supporte pas la vidéo.
+</video>
 
-
+Pour ajouter un diaporama :
+<div class="carousel-container">
+    <div class="carousel-slide">
+        <img src="assets/img/image1.jpg">
+    </div>
+    <div class="carousel-slide">
+        <img src="assets/img/image2.jpg">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
 
 At the end, the kart didn't work because of a problem on the transmission part and we didn't have enough time to correct it. 
 
