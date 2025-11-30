@@ -8,9 +8,9 @@
               <span class="category-label">{{ skill.category}}</span>
             
               <ul class="skills-list">
-                {% for skill in skill.tools %}
-                  <li class="skill">
-                    {{ skill }}
+                {% for tool in skill.tools %}
+                  <li class="skill badge-skill" data-name="{{ tool }}">
+                    {{ tool }}
                   </li>
                 {% endfor %}
                 </ul>
@@ -19,5 +19,36 @@
           </li> 
         {% endfor %}
       </ul>
-
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const skills = document.querySelectorAll('.badge-skill');
+    
+    // Couleurs aléatoires pour rendre ça vivant (ou tu peux fixer une couleur hex)
+    const colors = ['00599C', '3776AB', 'E34F26', '3178C6', 'F7DF1E', '00ADD8', '4479A1'];
+
+    skills.forEach((skill, index) => {
+        const text = skill.getAttribute('data-name');
+        // Nettoyage du nom pour l'URL (ex: C++ devient C%2B%2B)
+        const cleanText = encodeURIComponent(text.replace('-', '--')); 
+        const color = colors[index % colors.length]; // Cycle à travers les couleurs
+        
+        // Création de l'image
+        const img = document.createElement('img');
+        // URL magique de Shields.io
+        img.src = `https://img.shields.io/badge/${cleanText}-1f2937?style=for-the-badge&logo=${cleanText}&logoColor=white`;
+        img.alt = text;
+        img.style.borderRadius = "4px"; 
+        
+        // Gestion d'erreur : si le logo n'existe pas, on affiche juste le nom en badge
+        img.onerror = function() {
+            this.src = `https://img.shields.io/badge/${cleanText}-1f2937?style=for-the-badge`;
+        };
+
+        // Remplacement du texte par l'image
+        skill.innerHTML = '';
+        skill.appendChild(img);
+    });
+});
+</script>
