@@ -1,43 +1,24 @@
 <section class="hero-section">
     <div class="group">
         <div class="text">
-    <h2>
-        I'm 
-        <span class="typewriter">
-             {{ site.name }}
-        </span>
-        
-        {% if site.external-links %}
-        <span class="external-links">
-             </span>
-        {% endif %}
-    </h2>
+            <h2>
+                I'm <span class="typewriter">{{ site.name }}</span>
                 {% if site.external-links %}
                 <span class="external-links">
                     {% assign platforms = "linkedin,x-twitter,github,stackoverflow,discord,medium,threads,bluesky,instagram,youtube" | split: "," %}
                     {% for platform in platforms %}
                         {% if site.external-links[platform] %}
                             {% case platform %}
-                            {% when 'linkedin' %}
-                            <a href="https://www.linkedin.com/in/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            {% when 'github' %}
-                            <a href="https://github.com/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            {% when 'stackoverflow' %}
-                            <a href="https://stackoverflow.com/users/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
-                            {% when 'discord' %}
-                            <a href="https://discord.com/users/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-discord"></i></a>
-                            {% when 'medium' %}
-                            <a href="https://medium.com/@{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-medium"></i></a>
-                            {% when 'x-twitter' %}
-                            <a href="https://x.com/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                            {% when 'threads' %}
-                            <a href="https://threads.net/@{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-threads"></i></a>
-                            {% when 'bluesky' %}
-                            <a href="https://bsky.app/profile/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-solid fa-cloud"></i></a>
-                            {% when 'instagram' %}
-                            <a href="https://instagram.com/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            {% when 'youtube' %}
-                            <a href="https://youtube.com/@{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            {% when 'linkedin' %} <a href="https://www.linkedin.com/in/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            {% when 'github' %} <a href="https://github.com/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            {% when 'stackoverflow' %} <a href="https://stackoverflow.com/users/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+                            {% when 'discord' %} <a href="https://discord.com/users/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                            {% when 'medium' %} <a href="https://medium.com/@{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-medium"></i></a>
+                            {% when 'x-twitter' %} <a href="https://x.com/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                            {% when 'threads' %} <a href="https://threads.net/@{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                            {% when 'bluesky' %} <a href="https://bsky.app/profile/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-solid fa-cloud"></i></a>
+                            {% when 'instagram' %} <a href="https://instagram.com/{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            {% when 'youtube' %} <a href="https://youtube.com/@{{ site.external-links[platform] }}/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                             {% endcase %}
                         {% endif %}
                     {% endfor %}
@@ -55,13 +36,13 @@
             
         </div>
         <div class="headshot">
-            <img src= {{site.profile_image}} alt="john doe headshot">       
+            <img src= {{site.profile_image}} alt="profile picture">       
         </div>
     </div>
 </section>
 
-<div class="arrow" style="text-align: center; margin: 30px 0 60px 0;"> 
-    <a href="#projects" style="text-decoration: none; color: inherit;">
+<div class="arrow"> 
+    <a href="#projects">
         More About Me
         <i class="fa-solid fa-angles-down" style="display: block; margin-top: 5px;"></i>
     </a> 
@@ -71,21 +52,34 @@
     <canvas id="oscilloCanvas"></canvas>
 </div>
 
-<div class="scope-container" style="position: relative; margin-top: 0; bottom: auto;">
-    <div class="scope-line"></div>
-</div>
-
-
 <style>
+    /* Correction Alignement Hero */
+    .hero-section .group {
+        display: flex;
+        align-items: center; /* C'est ÇA qui aligne le texte et la photo verticalement */
+        justify-content: space-between;
+    }
+
+    /* Ajustement bouton */
+    .arrow {
+        text-align: center; 
+        margin: 20px 0 10px 0; /* Marges réduites pour rapprocher l'oscillo */
+    }
+    .arrow a {
+        text-decoration: none; 
+        color: inherit;
+    }
+
     /* Style du Grand Oscilloscope */
     .oscillo-container {
         position: relative;
         width: 100%;
-        height: 150px; 
+        height: 120px; /* Hauteur légèrement réduite */
         background-color: #ffffff;
         overflow: hidden;
         border-top: 1px solid #f0f0f0;
         border-bottom: 1px solid #e0e0e0;
+        margin-top: 0px; /* Collé au bouton */
     }
 
     canvas#oscilloCanvas {
@@ -102,7 +96,7 @@
     
     let width, height;
     let time = 0;
-    let waveType = 0; // 0: Sinus, 1: Carré, 2: Triangle, 3: Dents de scie
+    let waveType = 0; 
 
     // --- CONFIGURATION ---
     const waveSpeed = 0.03;      
@@ -110,10 +104,7 @@
     const amplitudeFactor = 0.7; 
     const moveSpeed = 3;         
     
-    // Changement de forme d'onde toutes les 5 secondes
-    setInterval(() => {
-        waveType = (waveType + 1) % 4; 
-    }, 5000);
+    setInterval(() => { waveType = (waveType + 1) % 4; }, 5000);
 
     function resize() {
         width = canvas.width = canvas.parentElement.offsetWidth;
@@ -126,14 +117,9 @@
         ctx.strokeStyle = "rgba(0, 0, 0, 0.05)"; 
         ctx.lineWidth = 1;
         const gridSize = 40;
-        
         ctx.beginPath();
-        for (let x = 0; x <= width; x += gridSize) {
-            ctx.moveTo(x, 0); ctx.lineTo(x, height);
-        }
-        for (let y = 0; y <= height; y += gridSize) {
-            ctx.moveTo(0, y); ctx.lineTo(width, y);
-        }
+        for (let x = 0; x <= width; x += gridSize) { ctx.moveTo(x, 0); ctx.lineTo(x, height); }
+        for (let y = 0; y <= height; y += gridSize) { ctx.moveTo(0, y); ctx.lineTo(width, y); }
         ctx.stroke();
     }
 
@@ -141,24 +127,15 @@
         const centerY = height / 2;
         const amp = (height / 2) * amplitudeFactor;
         const angle = (x * frequency) - (t * moveSpeed);
-
         let val = 0;
 
-        if (waveType === 0) { 
-            // SINUS
-            val = Math.sin(angle);
-        } else if (waveType === 1) { 
-            // CARRÉ
-            val = Math.sign(Math.sin(angle));
-        } else if (waveType === 2) { 
-            // TRIANGLE
-            val = (2 / Math.PI) * Math.asin(Math.sin(angle));
-        } else if (waveType === 3) {
-            // DENTS DE SCIE
+        if (waveType === 0) val = Math.sin(angle);
+        else if (waveType === 1) val = Math.sign(Math.sin(angle));
+        else if (waveType === 2) val = (2 / Math.PI) * Math.asin(Math.sin(angle));
+        else if (waveType === 3) {
             let normalizedAngle = (angle / (2 * Math.PI)); 
             val = 2 * (normalizedAngle - Math.floor(normalizedAngle + 0.5));
         }
-        
         return centerY + (val * amp);
     }
 
@@ -166,12 +143,11 @@
         ctx.clearRect(0, 0, width, height); 
         ctx.fillStyle = '#ffffff'; 
         ctx.fillRect(0, 0, width, height);
-
         drawGrid();
 
         ctx.beginPath();
         ctx.lineWidth = 3; 
-        ctx.strokeStyle = '#0056b3'; // Bleu ingénieur
+        ctx.strokeStyle = '#0056b3'; 
         ctx.shadowBlur = 0; 
 
         for (let x = 0; x < width; x++) {
@@ -180,11 +156,9 @@
             else ctx.lineTo(x, y);
         }
         ctx.stroke();
-        
         time += waveSpeed;
         requestAnimationFrame(animate);
     }
-
     animate();
 })();
 </script>
