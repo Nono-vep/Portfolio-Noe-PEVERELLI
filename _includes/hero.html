@@ -1,3 +1,136 @@
+<div class="oscillo-container">
+    <canvas id="oscilloCanvas"></canvas>
+    <div class="oscillo-overlay"></div>
+</div>
+
+<style>
+    .oscillo-container {
+        position: relative;
+        width: 100%;
+        height: 200px; /* Hauteur du bandeau : modifie ici si tu veux plus gros */
+        background-color: #0e1217; /* Fond noir/gris oscilloscope */
+        overflow: hidden;
+        border-bottom: 2px solid #333;
+        margin-bottom: 20px;
+    }
+
+    canvas#oscilloCanvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Effet "Vignetage" pour faire écran bombé (optionnel) */
+    .oscillo-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        box-shadow: inset 0 0 50px rgba(0,0,0,0.9);
+        pointer-events: none;
+    }
+</style>
+
+<script>
+(function() {
+    const canvas = document.getElementById('oscilloCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let width, height;
+    let time = 0;
+    let waveType = 0; // 0: Sinus, 1: Carré, 2: Triangle
+
+    // Configuration
+    const waveSpeed = 0.15; // Vitesse de défilement
+    const frequency = 0.05; // Fréquence du signal
+    const amplitudeFactor = 0.8; // Amplitude (0.8 = 80% de la hauteur)
+    
+    // Changement de forme d'onde toutes les 3 secondes
+    setInterval(() => {
+        waveType = (waveType + 1) % 3;
+    }, 3000);
+
+    function resize() {
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function drawGrid() {
+        ctx.strokeStyle = "rgba(0, 255, 0, 0.1)"; // Grille verte très pâle
+        ctx.lineWidth = 1;
+        const gridSize = 40;
+        
+        ctx.beginPath();
+        // Lignes verticales
+        for (let x = 0; x <= width; x += gridSize) {
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, height);
+        }
+        // Lignes horizontales
+        for (let y = 0; y <= height; y += gridSize) {
+            ctx.moveTo(0, y);
+            ctx.lineTo(width, y);
+        }
+        ctx.stroke();
+    }
+
+    function getY(x, t) {
+        const centerY = height / 2;
+        const amp = (height / 2) * amplitudeFactor;
+        const angle = (x * frequency) - (t * 5); // Le t*5 fait bouger l'onde
+
+        let val = 0;
+
+        if (waveType === 0) { 
+            // SINUS
+            val = Math.sin(angle);
+        } else if (waveType === 1) { 
+            // CARRÉ (approximation douce pour éviter l'aliasing moche)
+            val = Math.sign(Math.sin(angle));
+        } else { 
+            // TRIANGLE
+            // Formule mathématique du triangle wave
+            val = (2 / Math.PI) * Math.asin(Math.sin(angle));
+        }
+        
+        return centerY + (val * amp);
+    }
+
+    function animate() {
+        // Nettoyage avec légère traînée (effet persistance rétinienne)
+        ctx.fillStyle = 'rgba(14, 18, 23, 0.2)'; 
+        ctx.fillRect(0, 0, width, height);
+
+        drawGrid();
+
+        // Dessin du signal
+        ctx.beginPath();
+        ctx.lineWidth = 3; // Épaisseur du trait
+        
+        // Couleur du signal (Vert fluo ou Cyan)
+        ctx.strokeStyle = '#00ff41'; // Vert Matrix
+        // ctx.strokeStyle = '#00ffff'; // Si tu préfères le Cyan
+        
+        ctx.shadowBlur = 10; // Effet néon
+        ctx.shadowColor = ctx.strokeStyle;
+
+        for (let x = 0; x < width; x++) {
+            const y = getY(x, time);
+            if (x === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        
+        // Réinitialisation des ombres pour la prochaine frame (perf)
+        ctx.shadowBlur = 0;
+
+        time += waveSpeed;
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+})();
+</script>
 
 <!-- SECTION 1: Hero -->
 <section class="hero-section">
