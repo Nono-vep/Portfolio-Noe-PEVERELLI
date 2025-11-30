@@ -2,7 +2,8 @@
     <div class="group">
         <div class="text">
             <h2>
-                I'm <span class="typewriter">{{ site.name }}</span>
+                I'm <br> <span class="typewriter">{{ site.name }}</span>
+                
                 {% if site.external-links %}
                 <span class="external-links">
                     {% assign platforms = "linkedin,x-twitter,github,stackoverflow,discord,medium,threads,bluesky,instagram,youtube" | split: "," %}
@@ -53,53 +54,61 @@
 </div>
 
 <style>
-    /* 1. CORRECTION ALIGNEMENT HERO */
+    /* 1. LAYOUT HERO */
     .hero-section .group {
         display: flex;
-        align-items: center; /* Centre verticalement les deux blocs */
+        align-items: center; 
         justify-content: space-between;
-        gap: 20px;
+        gap: 40px; /* Espace entre le texte et la photo */
     }
 
     .hero-section .text {
-        flex: 1; /* Le texte prend l'espace disponible */
+        flex: 1;
     }
 
-    /* Important : on supprime la marge du haut du titre pour qu'il ne soit pas décalé */
+    /* 2. TAILLE DU TEXTE RÉDUITE */
     .hero-section .text h2 {
-        margin-top: 0; 
+        font-size: 2.8rem; /* Taille réduite (avant c'était énorme genre 50px+) */
         line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
     }
 
+    /* 3. TAILLE DE LA PHOTO RÉDUITE */
     .headshot {
-        flex: 0 0 auto; /* Empêche la photo de s'écraser */
-        display: flex;
-        align-items: center;
+        flex: 0 0 auto;
     }
 
-    /* 2. EFFET "IMAGE VIVANTE" (ZOOM) */
+    .headshot img {
+        width: 280px; /* Beaucoup plus petit (avant c'était ~400px) */
+        height: 280px;
+        object-fit: cover;
+        border-radius: 50%; /* Garde le rond parfait */
+        display: block;
+    }
+
+    /* EFFET ZOOM SUR IMAGE */
     .hover-zoom {
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
     }
-    
     .hover-zoom:hover {
-        transform: scale(1.05); /* Grossit de 5% au survol */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Ajoute une ombre */
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* 3. OSCILLOSCOPE REMONTÉ */
+    /* RESTE DU STYLE (Bouton & Oscillo) */
     .arrow {
         text-align: center; 
         position: relative;
-        z-index: 10; /* Pour que le bouton passe AU-DESSUS de l'oscillo si besoin */
-        margin-bottom: 0; /* On colle le bas */
+        z-index: 10; 
+        margin-bottom: 0;
     }
-    
     .arrow a {
         text-decoration: none; 
         color: inherit;
-        background: white; /* Petit fond blanc pour que le trait ne coupe pas le texte */
+        background: white; 
         padding: 5px 10px;
         border-radius: 10px;
     }
@@ -111,10 +120,8 @@
         background-color: #ffffff;
         overflow: hidden;
         border-bottom: 1px solid #e0e0e0;
-        
-        /* C'est ICI qu'on le remonte : marge négative */
         margin-top: -30px; 
-        z-index: 1; /* En dessous du bouton */
+        z-index: 1; 
     }
 
     canvas#oscilloCanvas {
@@ -126,24 +133,16 @@
 
 <script>
 (function() {
-    <script>
-(function() {
-    // --- NOUVEAU CODE : FORCE LE RETOUR EN HAUT AU RAFRAÎCHISSEMENT ---
-    
-    // 1. Si on détecte un # dans l'url (ex: #projects), on le nettoie sans recharger
+    // Force le retour en haut au rafraîchissement
     if (window.location.hash) {
         window.history.replaceState(null, null, window.location.pathname);
     }
-
-    // 2. On force le scroll en haut immédiat
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
     window.scrollTo(0, 0);
-    
-    // --- FIN NOUVEAU CODE ---
 
-
+    // Code Oscilloscope
     const canvas = document.getElementById('oscilloCanvas');
     const ctx = canvas.getContext('2d');
     
@@ -151,7 +150,6 @@
     let time = 0;
     let waveType = 0; 
 
-    // --- CONFIGURATION ---
     const waveSpeed = 0.03;      
     const frequency = 0.03;      
     const amplitudeFactor = 0.7; 
