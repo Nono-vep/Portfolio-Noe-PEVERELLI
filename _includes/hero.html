@@ -61,12 +61,10 @@
         align-items: center; 
         justify-content: space-between;
         gap: 30px; 
-        margin-bottom: 10px;
+        margin-bottom: 0px; /* On réduit la marge du bas de la section */
     }
 
-    .hero-section .text {
-        flex: 1; 
-    }
+    .hero-section .text { flex: 1; }
 
     /* TITRE FORCE */
     .hero-section .text h2 {
@@ -76,7 +74,7 @@
         margin-bottom: 20px !important;
     }
 
-    /* --- CORRECTION TYPEWRITER (Ajustement précis) --- */
+    /* TYPEWRITER */
     .typewriter {
         display: inline-block;
         overflow: hidden; 
@@ -84,105 +82,65 @@
         white-space: nowrap; 
         margin: 0;
         width: 0;
-        /* Animation : 13 étapes pour 13 caractères */
-        animation: 
-            typing 1.5s steps(13, end) forwards,
-            blink-caret .75s step-end infinite;
+        animation: typing 1.5s steps(13, end) forwards, blink-caret .75s step-end infinite;
     }
-
-    /* Largeur réduite à 9.5ch pour coller au texte "Noé PEVERELLI" */
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 9.5ch; } 
-    }
-    
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: #333; }
-    }
-
+    @keyframes typing { from { width: 0 } to { width: 9.5ch; } } /* Ajusté à 9.5ch pour ton nom */
+    @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #333; } }
 
     /* 2. IMAGE FORCEE */
     .hero-section .headshot img {
-        width: 300px !important;
-        height: 300px !important;
-        min-width: 300px !important; 
-        min-height: 300px !important;
-        object-fit: cover !important;
-        border-radius: 50% !important;
+        width: 300px !important; height: 300px !important;
+        min-width: 300px !important; min-height: 300px !important;
+        object-fit: cover !important; border-radius: 50% !important;
         aspect-ratio: 1/1 !important; 
     }
+    .headshot { flex: 0 0 auto !important; display: block !important; }
     
-    .headshot {
-        flex: 0 0 auto !important;
-        display: block !important;
-    }
-    .hover-zoom {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-    }
-    .hover-zoom:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
+    .hover-zoom { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+    .hover-zoom:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 
-    /* 3. BOUTON & OSCILLO AJUSTÉS */
+    /* 3. REGLAGE INDÉPENDANT DES ESPACES */
+    
+    /* LE BOUTON : On le remonte vers le texte */
     .arrow {
         text-align: center; 
         position: relative;
         z-index: 10; 
+        margin-top: -30px; /* C'est ça qui le remonte près du texte */
         margin-bottom: 0;
     }
     .arrow a {
-        text-decoration: none; 
-        color: inherit;
-        background: white; 
-        padding: 5px 10px;
-        border-radius: 10px;
+        text-decoration: none; color: inherit;
+        background: white; padding: 5px 10px; border-radius: 10px;
         display: inline-block;
     }
 
-    /* OSCILLO : Plus bas et plus haut */
+    /* L'OSCILLOGRAMME : On le descend loin du bouton */
     .oscillo-container {
         position: relative;
         width: 100%;
-        height: 200px; /* Hauteur augmentée (était 160px) */
+        height: 200px; 
         background-color: #ffffff;
         overflow: hidden;
         border-bottom: 1px solid #e0e0e0;
         
-        margin-top: 40px; /* On le descend franchement */
+        margin-top: 60px; /* C'est ça qui crée l'espace VIDE entre le bouton et l'onde */
         z-index: 1; 
     }
 
-    canvas#oscilloCanvas {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
+    canvas#oscilloCanvas { display: block; width: 100%; height: 100%; }
 </style>
 
 <script>
 (function() {
-    if (window.location.hash) {
-        window.history.replaceState(null, null, window.location.pathname);
-    }
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }
+    if (window.location.hash) window.history.replaceState(null, null, window.location.pathname);
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
 
     const canvas = document.getElementById('oscilloCanvas');
     const ctx = canvas.getContext('2d');
-    
-    let width, height;
-    let time = 0;
-    let waveType = 0; 
-
-    const waveSpeed = 0.03;      
-    const frequency = 0.03;      
-    const amplitudeFactor = 0.7; 
-    const moveSpeed = 3;         
+    let width, height, time = 0, waveType = 0; 
+    const waveSpeed = 0.03, frequency = 0.03, amplitudeFactor = 0.7, moveSpeed = 3;         
     
     setInterval(() => { waveType = (waveType + 1) % 4; }, 5000);
 
@@ -194,8 +152,7 @@
     resize();
 
     function drawGrid() {
-        ctx.strokeStyle = "rgba(0, 0, 0, 0.05)"; 
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.05)"; ctx.lineWidth = 1;
         const gridSize = 40;
         ctx.beginPath();
         for (let x = 0; x <= width; x += gridSize) { ctx.moveTo(x, 0); ctx.lineTo(x, height); }
@@ -208,7 +165,6 @@
         const amp = (height / 2) * amplitudeFactor;
         const angle = (x * frequency) - (t * moveSpeed);
         let val = 0;
-
         if (waveType === 0) val = Math.sin(angle);
         else if (waveType === 1) val = Math.sign(Math.sin(angle));
         else if (waveType === 2) val = (2 / Math.PI) * Math.asin(Math.sin(angle));
@@ -220,20 +176,12 @@
     }
 
     function animate() {
-        ctx.clearRect(0, 0, width, height); 
-        ctx.fillStyle = '#ffffff'; 
-        ctx.fillRect(0, 0, width, height);
+        ctx.clearRect(0, 0, width, height); ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, width, height);
         drawGrid();
-
-        ctx.beginPath();
-        ctx.lineWidth = 3; 
-        ctx.strokeStyle = '#0056b3'; 
-        ctx.shadowBlur = 0; 
-
+        ctx.beginPath(); ctx.lineWidth = 3; ctx.strokeStyle = '#0056b3'; ctx.shadowBlur = 0; 
         for (let x = 0; x < width; x++) {
             const y = getY(x, time);
-            if (x === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
+            if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
         }
         ctx.stroke();
         time += waveSpeed;
