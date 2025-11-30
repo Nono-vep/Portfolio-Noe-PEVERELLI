@@ -994,3 +994,16 @@ footer p {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #003d82; /* Bleu plus foncé */
 }
+
+/* === ICÔNES RÉSEAUX SOCIAUX NÉON === */
+.external-links a {
+    transition: all 0.3s ease;
+    display: inline-block; /* Nécessaire pour la transformation */
+}
+
+.external-links a:hover {
+    transform: translateY(-3px); /* Le logo monte un peu */
+    color: #0056b3; /* Devient bleu ingénieur */
+    /* L'effet de lueur (Glow) */
+    text-shadow: 0 0 8px rgba(0, 86, 179, 0.6), 0 0 15px rgba(0, 86, 179, 0.4);
+}
