@@ -298,3 +298,15 @@
     }
 })();
 </script>
+
+<script>
+(function() {
+    let docTitle = document.title;
+    window.addEventListener("blur", () => {
+        document.title = "Come back! ⚡"; // Change le titre quand on part
+    });
+    window.addEventListener("focus", () => {
+        document.title = docTitle; // Remet le titre normal quand on revient
+    });
+})();
+</script>
