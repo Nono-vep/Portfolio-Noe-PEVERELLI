@@ -36,7 +36,7 @@
             
         </div>
         <div class="headshot">
-            <img src= {{site.profile_image}} alt="profile picture">       
+            <img class="hover-zoom" src="{{ site.profile_image }}" alt="profile picture">       
         </div>
     </div>
 </section>
@@ -53,33 +53,68 @@
 </div>
 
 <style>
-    /* Correction Alignement Hero */
+    /* 1. CORRECTION ALIGNEMENT HERO */
     .hero-section .group {
         display: flex;
-        align-items: center; /* C'est ÇA qui aligne le texte et la photo verticalement */
+        align-items: center; /* Centre verticalement les deux blocs */
         justify-content: space-between;
+        gap: 20px;
     }
 
-    /* Ajustement bouton */
+    .hero-section .text {
+        flex: 1; /* Le texte prend l'espace disponible */
+    }
+
+    /* Important : on supprime la marge du haut du titre pour qu'il ne soit pas décalé */
+    .hero-section .text h2 {
+        margin-top: 0; 
+        line-height: 1.2;
+    }
+
+    .headshot {
+        flex: 0 0 auto; /* Empêche la photo de s'écraser */
+        display: flex;
+        align-items: center;
+    }
+
+    /* 2. EFFET "IMAGE VIVANTE" (ZOOM) */
+    .hover-zoom {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+        cursor: pointer;
+    }
+    
+    .hover-zoom:hover {
+        transform: scale(1.05); /* Grossit de 5% au survol */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Ajoute une ombre */
+    }
+
+    /* 3. OSCILLOSCOPE REMONTÉ */
     .arrow {
         text-align: center; 
-        margin: 20px 0 10px 0; /* Marges réduites pour rapprocher l'oscillo */
+        position: relative;
+        z-index: 10; /* Pour que le bouton passe AU-DESSUS de l'oscillo si besoin */
+        margin-bottom: 0; /* On colle le bas */
     }
+    
     .arrow a {
         text-decoration: none; 
         color: inherit;
+        background: white; /* Petit fond blanc pour que le trait ne coupe pas le texte */
+        padding: 5px 10px;
+        border-radius: 10px;
     }
 
-    /* Style du Grand Oscilloscope */
     .oscillo-container {
         position: relative;
         width: 100%;
-        height: 120px; /* Hauteur légèrement réduite */
+        height: 120px; 
         background-color: #ffffff;
         overflow: hidden;
-        border-top: 1px solid #f0f0f0;
         border-bottom: 1px solid #e0e0e0;
-        margin-top: 0px; /* Collé au bouton */
+        
+        /* C'est ICI qu'on le remonte : marge négative */
+        margin-top: -30px; 
+        z-index: 1; /* En dessous du bouton */
     }
 
     canvas#oscilloCanvas {
