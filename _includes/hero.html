@@ -200,5 +200,44 @@
         requestAnimationFrame(animate);
     }
     animate();
+
+    // === DEBUT DU CODE EASTER EGG (À COLLER ICI) ===
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let cursor = 0;
+
+    document.addEventListener('keydown', (e) => {
+        // On vérifie si la touche appuyée correspond à la suite du code
+        if (e.key === konamiCode[cursor]) {
+            cursor++;
+            if (cursor === konamiCode.length) {
+                activateEasterEgg();
+                cursor = 0;
+            }
+        } else {
+            cursor = 0; // Si on se trompe, on recommence à zéro
+        }
+    });
+
+    function activateEasterEgg() {
+        alert("🎮 CHEAT CODE ACTIVÉ : Mode Ingénieur !");
+        
+        // Fait tourner la photo de profil
+        const img = document.querySelector('.headshot img');
+        if(img) {
+            img.style.transition = "transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"; // Effet rebond
+            img.style.transform = "rotate(360deg) scale(1.2)";
+            
+            // Change la couleur de l'oscilloscope en rouge temporairement
+            const oldColor = ctx.strokeStyle;
+            ctx.strokeStyle = '#ff0000';
+            
+            setTimeout(() => {
+                img.style.transform = "rotate(0deg) scale(1)";
+                ctx.strokeStyle = '#0056b3'; // Remet le bleu
+            }, 2000);
+        }
+    }
+    // === FIN DU CODE EASTER EGG ===
+
 })();
 </script>
