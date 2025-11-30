@@ -241,3 +241,49 @@
 
 })();
 </script>
+
+<script>
+(function() {
+    // Séquence : Haut, Haut, Bas, Bas, Gauche, Droite, Gauche, Droite, b, a
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let cursor = 0;
+
+    document.addEventListener('keydown', function(e) {
+        // Optionnel : Décommente la ligne dessous pour voir dans la console quelle touche est détectée
+        // console.log(e.key);
+
+        // On compare la touche appuyée avec la touche attendue dans la séquence
+        // On met toLowerCase() pour que ça marche même si tu es en Majuscules
+        if (e.key.toLowerCase() === konamiCode[cursor].toLowerCase()) {
+            cursor++;
+            
+            // Si on a tapé toute la suite
+            if (cursor === konamiCode.length) {
+                activateEasterEgg();
+                cursor = 0; // On remet à zéro pour pouvoir le refaire
+            }
+        } else {
+            cursor = 0; // Si on se trompe, on repart du début
+        }
+    });
+
+    function activateEasterEgg() {
+        alert("🎮 CHEAT CODE ACTIVÉ !");
+        
+        // Cible l'image de profil
+        const img = document.querySelector('.headshot img');
+        
+        if(img) {
+            // Ajoute une transition fluide
+            img.style.transition = "transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
+            // Fait tourner (360°) et grossir (x1.5)
+            img.style.transform = "rotate(360deg) scale(1.5)";
+            
+            // Remet à la normale après 2 secondes
+            setTimeout(function() {
+                img.style.transform = "rotate(0deg) scale(1)";
+            }, 2000);
+        }
+    }
+})();
+</script>
