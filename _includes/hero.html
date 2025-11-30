@@ -242,6 +242,8 @@
 })();
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 <script>
 (function() {
     // Séquence : Haut, Haut, Bas, Bas, Gauche, Droite, Gauche, Droite, b, a
@@ -249,41 +251,50 @@
     let cursor = 0;
 
     document.addEventListener('keydown', function(e) {
-        // Optionnel : Décommente la ligne dessous pour voir dans la console quelle touche est détectée
-        // console.log(e.key);
-
-        // On compare la touche appuyée avec la touche attendue dans la séquence
-        // On met toLowerCase() pour que ça marche même si tu es en Majuscules
+        // On compare la touche (insensible à la casse)
         if (e.key.toLowerCase() === konamiCode[cursor].toLowerCase()) {
             cursor++;
-            
-            // Si on a tapé toute la suite
             if (cursor === konamiCode.length) {
                 activateEasterEgg();
-                cursor = 0; // On remet à zéro pour pouvoir le refaire
+                cursor = 0; // Reset
             }
         } else {
-            cursor = 0; // Si on se trompe, on repart du début
+            cursor = 0; // Erreur, reset
         }
     });
 
+    // La fonction qui lance tout le spectacle
     function activateEasterEgg() {
-        alert("🎮 CHEAT CODE ACTIVÉ !");
-        
-        // Cible l'image de profil
+        // On enlève l'alerte moche, place au show !
+
+        // --- EFFET 1 : LA PHOTO TOURNE ---
         const img = document.querySelector('.headshot img');
-        
         if(img) {
-            // Ajoute une transition fluide
             img.style.transition = "transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
-            // Fait tourner (360°) et grossir (x1.5)
-            img.style.transform = "rotate(360deg) scale(1.5)";
+            // Rotation + léger zoom
+            img.style.transform = "rotate(720deg) scale(1.2)"; 
             
-            // Remet à la normale après 2 secondes
             setTimeout(function() {
                 img.style.transform = "rotate(0deg) scale(1)";
-            }, 2000);
+            }, 2500);
         }
+
+        // --- EFFET 2 : EXPLOSION DE CONFETTIS ---
+        // On définit une fonction pour tirer des canons depuis les côtés
+        function fireCannon(particleRatio, opts) {
+            confetti(Object.assign({}, {
+                particleCount: Math.floor(200 * particleRatio), // Beaucoup de particules
+                spread: 70,
+                origin: { y: 0.6 } // Tire depuis le bas-milieu de l'écran
+            }, opts));
+        }
+
+        // On lance plusieurs salves pour un effet réaliste
+        fireCannon(0.25, { spread: 26, startVelocity: 55 });
+        fireCannon(0.2, { spread: 60 });
+        fireCannon(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+        fireCannon(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+        fireCannon(0.1, { spread: 120, startVelocity: 45 });
     }
 })();
 </script>
