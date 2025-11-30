@@ -76,7 +76,7 @@
         margin-bottom: 20px !important;
     }
 
-    /* --- CORRECTION TYPEWRITER (Plus court) --- */
+    /* --- CORRECTION TYPEWRITER (Ajustement précis) --- */
     .typewriter {
         display: inline-block;
         overflow: hidden; 
@@ -84,16 +84,16 @@
         white-space: nowrap; 
         margin: 0;
         width: 0;
-        /* Animation ajustée : 13 étapes */
+        /* Animation : 13 étapes pour 13 caractères */
         animation: 
             typing 1.5s steps(13, end) forwards,
             blink-caret .75s step-end infinite;
     }
 
-    /* L'animation s'arrête plus tôt (12.5 caractères) */
+    /* Largeur réduite à 9.5ch pour coller au texte "Noé PEVERELLI" */
     @keyframes typing {
         from { width: 0 }
-        to { width: 12.5ch; } 
+        to { width: 9.5ch; } 
     }
     
     @keyframes blink-caret {
@@ -142,15 +142,16 @@
         display: inline-block;
     }
 
-    /* OSCILLO PLUS BAS ET PLUS HAUT */
+    /* OSCILLO : Plus bas et plus haut */
     .oscillo-container {
         position: relative;
         width: 100%;
-        height: 160px; /* Hauteur augmentée (était 120px) */
+        height: 200px; /* Hauteur augmentée (était 160px) */
         background-color: #ffffff;
         overflow: hidden;
         border-bottom: 1px solid #e0e0e0;
-        margin-top: 20px; /* Marge positive pour le descendre sous le bouton */
+        
+        margin-top: 40px; /* On le descend franchement */
         z-index: 1; 
     }
 
