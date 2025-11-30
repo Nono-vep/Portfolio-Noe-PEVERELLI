@@ -51,11 +51,18 @@
     </div>
 </section>
 
+<div class="arrow" style="text-align: center; margin: 30px 0 10px 0;"> 
+    <a href="#projects" style="text-decoration: none; color: inherit;">
+        More About Me
+        <i class="fa-solid fa-angles-down" style="display: block; margin-top: 5px;"></i>
+    </a> 
+</div>
+
 <div class="oscillo-container">
     <canvas id="oscilloCanvas"></canvas>
 </div>
 
-<div class="scope-container" style="position: relative; margin-top: 10px; bottom: auto;">
+<div class="scope-container" style="position: relative; margin-top: 0; bottom: auto;">
     <div class="scope-line"></div>
 </div>
 
@@ -65,12 +72,12 @@
     .oscillo-container {
         position: relative;
         width: 100%;
-        height: 150px; /* Hauteur ajustée */
+        height: 150px; 
         background-color: #ffffff;
         overflow: hidden;
         border-top: 1px solid #f0f0f0;
         border-bottom: 1px solid #e0e0e0;
-        margin-top: 20px;
+        /* La marge du haut est gérée par le bouton au-dessus maintenant */
     }
 
     canvas#oscilloCanvas {
@@ -148,9 +155,8 @@
     }
 
     function animate() {
-        // --- MODIFICATION ICI : NETTOYAGE COMPLET (Plus de Blur/Traînée) ---
-        ctx.clearRect(0, 0, width, height); // On efface tout
-        ctx.fillStyle = '#ffffff'; // On s'assure que le fond reste blanc
+        ctx.clearRect(0, 0, width, height); 
+        ctx.fillStyle = '#ffffff'; 
         ctx.fillRect(0, 0, width, height);
 
         drawGrid();
@@ -158,9 +164,8 @@
         ctx.beginPath();
         ctx.lineWidth = 3; 
         ctx.strokeStyle = '#0056b3'; // Bleu ingénieur
-        ctx.shadowBlur = 0; // Pas de néon
+        ctx.shadowBlur = 0; 
 
-        // Dessin du signal
         for (let x = 0; x < width; x++) {
             const y = getY(x, time);
             if (x === 0) ctx.moveTo(x, y);
