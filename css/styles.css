@@ -971,3 +971,26 @@ footer p {
   from, to { border-color: transparent }
   50% { border-color: var(--link-color); }
 }
+
+/* === CUSTOM SCROLLBAR === */
+/* Largeur de la barre */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Le fond (rail) */
+::-webkit-scrollbar-track {
+    background: #f5f5f5; 
+}
+
+/* La partie mobile (poignée) */
+::-webkit-scrollbar-thumb {
+    background-color: #0056b3; /* Ton bleu principal */
+    border-radius: 6px; /* Arrondi */
+    border: 3px solid #f5f5f5; /* Crée une marge blanche autour pour faire "aéré" */
+}
+
+/* Au survol de la souris */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #003d82; /* Bleu plus foncé */
+}
