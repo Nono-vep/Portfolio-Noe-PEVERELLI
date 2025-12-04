@@ -1,6 +1,7 @@
+---
 layout: post
 folder : mobility-project
-title: International Mobility
+title: International
 description: Exploration of global industrial and academic opportunities specializing in Power Electronics, Energy Conversion, and the "More Electric Aircraft."
 skills: 
   - Power Electronics
