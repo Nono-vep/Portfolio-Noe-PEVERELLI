@@ -39,7 +39,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
     </p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="safran_logo.png" alt="Safran Logo" style="max-width: 100%; height: auto;">
+    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/Safran_logo_2016.svg/640px-Safran_logo_2016.svg.png" alt="Safran Logo" style="max-width: 100%; height: auto;">
   </div>
 </div>
 
@@ -66,7 +66,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
     </p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="upm_logo.png" alt="UPM Logo" style="max-width: 100%; height: auto;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg/640px-Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg.png" alt="UPM Logo" style="max-width: 100%; height: auto;">
   </div>
 </div>
 
@@ -93,7 +93,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
     </p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="tum_logo.png" alt="TUM Logo" style="max-width: 100%; height: auto;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_Technical_University_of_Munich.svg/640px-Logo_Technical_University_of_Munich.svg.png" alt="TUM Logo" style="max-width: 100%; height: auto;">
   </div>
 </div>
 
@@ -103,4 +103,4 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
 
 ### The "More Electric Aircraft" Vision
 <br>
-{% include youtube-video.html id="VIDEO_ID_HERE" autoplay="false" width="800px" %}
+{% include youtube-video.html id="h8g5G1buNIM" autoplay="false" width="800px" %}
