@@ -1,6 +1,6 @@
 ---
 layout : post2
-folder: mobility-project
+folder: "mobility-project"
 title: "International Mobility"
 permalink: /international/
 description: "A strategic selection of global opportunities in Power Electronics, bridging the gap between the More Electric Aircraft vision and advanced academic research."
