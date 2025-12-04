@@ -58,12 +58,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
   </div>
 
   <div style="flex: 1; display: flex; justify-content: center;">
-    {% include image-gallery.html 
-      images="
-        https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg/640px-Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg.png
-      "
-      height="200"
-    %}
+    {% include image-gallery.html images="https://info.cype.com/wp-content/uploads/2025/06/UPM-Madrid-1024x475.png" height="200" %}
   </div>
 </div>
 
