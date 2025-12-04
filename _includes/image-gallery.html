@@ -1,30 +1,27 @@
-{% comment %}
-Enhanced image-gallery.html supporting:
-- External URLs (Unsplash, Wikimedia…)
-- Local images
-- Multiple images
-- Arbitrary characters in URLs
-Use separator "||" instead of commas:
-{% include image-gallery.html images="url1 || url2" %}
-{% endcomment %}
+{% assign image_paths = include.images | split: ", " %}
+{% assign gallery_height = include.height | default: "300" %}
+{% assign mode = include.mode | default: "cover" %}
 
-{% assign raw_images = include.images | replace: ' || ', '|' %}
-{% assign image_list = raw_images | split: '|' %}
+<div class="image-gallery" style="--gallery-height: {{ gallery_height }}px;">
+  {% for image_path in image_paths %}
+    {% assign image_name = image_path | strip %}
 
-<div class="image-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  {% for image in image_list %}
-    <div style="flex: 1 1 auto; text-align: center; min-width: 150px;">
+    {% if image_name contains 'http' %}
+      <!-- Image externe -->
       <img 
-        src="{{ image | strip }}" 
-        alt="image"
+        class="{{ mode }}"
+        src="{{ image_name }}"
+        alt="Web image"
         loading="lazy"
-        style="
-          max-height: {{ include.height | default: '300' }}px;
-          width: auto;
-          max-width: 100%;
-          object-fit: {{ include.mode | default: 'contain' }};
-        "
-      >
-    </div>
+      />
+    {% else %}
+      <!-- Image locale dans le dossier du projet -->
+      <img 
+        class="{{ mode }}"
+        src="{{ site.baseurl }}/assets/images/projects/{{ page.folder }}/{{ image_name }}"
+        alt="{{ image_name }}"
+        loading="lazy"
+      />
+    {% endif %}
   {% endfor %}
 </div>
