@@ -3,7 +3,8 @@ layout: post
 folder: mobility-project
 title: "International"
 permalink: /international/
-main-image: https://images.unsplash.com/photo-1529074963764-98f45c47344b?w=2000&auto=format&fit=crop&q=80
+# Illustration carte du monde + avion (Unsplash illustration)
+main-image: https://images.unsplash.com/illustrations/a-plane-flying-over-a-globe-with-a-passport-UC9RXyEQUHI?q=80&w=2000&auto=format&fit=crop
 ---
 
 # International Mobility at ENSEEIHT
@@ -30,9 +31,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
   </div>
 
   <div style="flex: 1; display: flex; justify-content: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/Safran_logo_2016.svg/640px-Safran_logo_2016.svg.png"
-         alt="Safran logo"
-         style="height:150px; object-fit:contain;">
+    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/Safran_logo_2016.svg/640px-Safran_logo_2016.svg.png" height="150" %}
   </div>
 </div>
 
@@ -60,9 +59,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
   </div>
 
   <div style="flex: 1; display: flex; justify-content: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg/640px-Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg.png"
-         alt="UPM logo"
-         style="height:200px; object-fit:contain;">
+    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg/640px-Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg.png" height="200" %}
   </div>
 </div>
 
@@ -87,9 +84,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
   </div>
 
   <div style="flex: 1; display: flex; justify-content: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_Technical_University_of_Munich.svg/640px-Logo_Technical_University_of_Munich.svg.png"
-         alt="TUM logo"
-         style="height:150px; object-fit:contain;">
+    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_Technical_University_of_Munich.svg/640px-Logo_Technical_University_of_Munich.svg.png" height="150" %}
   </div>
 </div>
 
