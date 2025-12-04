@@ -7,8 +7,6 @@ description: "A strategic selection of global opportunities in Power Electronics
 main-image: https://images.unsplash.com/photo-1580584126903-c17d41830450?q=80&w=2070&auto=format&fit=crop
 ---
 
-# International Mobility at ENSEEIHT
-
 As part of the engineering curriculum at ENSEEIHT, international mobility is a key milestone. To align with a specialization in **Power Electronics**, I have selected three targeted destinations that bridge the gap between cutting-edge industrial applications and top-tier academic research.
 
 ---
