@@ -1,9 +1,9 @@
 ---
 layout: post
-folder : mobility-project
+folder: mobility-project
 title: "International"
 permalink: /international/
-main-image: https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop
+main-image: https://images.unsplash.com/photo-1529074963764-98f45c47344b?w=2000&auto=format&fit=crop&q=80
 ---
 
 # International Mobility at ENSEEIHT
@@ -28,8 +28,11 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
       <li><strong>Chihuahua, Mexico:</strong> A major manufacturing hub for electrical wiring interconnection systems (EWIS) and components.</li>
     </ul>
   </div>
-  <div style="flex: 1;">
-    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/Safran_logo_2016.svg/640px-Safran_logo_2016.svg.png" height="150" mode="contain" %}
+
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/Safran_logo_2016.svg/640px-Safran_logo_2016.svg.png"
+         alt="Safran logo"
+         style="height:150px; object-fit:contain;">
   </div>
 </div>
 
@@ -55,8 +58,11 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
       A semester here allows students to work alongside researchers publishing in top IEEE journals.
     </p>
   </div>
-  <div style="flex: 1;">
-    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg/640px-Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg.png" height="200" mode="contain" %}
+
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg/640px-Logo_Universidad_Polit%C3%A9cnica_de_Madrid.svg.png"
+         alt="UPM logo"
+         style="height:200px; object-fit:contain;">
   </div>
 </div>
 
@@ -79,8 +85,11 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
       <li>Battery management systems (BMS).</li>
     </ul>
   </div>
-  <div style="flex: 1;">
-    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_Technical_University_of_Munich.svg/640px-Logo_Technical_University_of_Munich.svg.png" height="150" mode="contain" %}
+
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_Technical_University_of_Munich.svg/640px-Logo_Technical_University_of_Munich.svg.png"
+         alt="TUM logo"
+         style="height:150px; object-fit:contain;">
   </div>
 </div>
 
