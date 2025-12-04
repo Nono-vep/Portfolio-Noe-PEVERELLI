@@ -1,13 +1,14 @@
 {% assign image_paths = include.images | split: ", " %}
 {% assign gallery_height = include.height | default: "300" %}
 {% assign mode = include.mode | default: "cover" %}
+{% comment %} On définit un dossier par défaut (projects) si rien n'est précisé {% endcomment %}
+{% assign type_dossier = include.folder_type | default: "projects" %}
 
 <div class="image-gallery" style="--gallery-height: {{ gallery_height }}px;">
   {% for image_path in image_paths %}
     {% assign image_name = image_path | strip %}
 
     {% if image_name contains 'http' %}
-      <!-- Image externe -->
       <img 
         class="{{ mode }}"
         src="{{ image_name }}"
@@ -15,10 +16,9 @@
         loading="lazy"
       />
     {% else %}
-      <!-- Image locale dans le dossier du projet -->
       <img 
         class="{{ mode }}"
-        src="{{ site.baseurl }}/assets/images/projects/{{ page.folder }}/{{ image_name }}"
+        src="{{ site.baseurl }}/assets/images/{{ type_dossier }}/{{ page.folder }}/{{ image_name }}"
         alt="{{ image_name }}"
         loading="lazy"
       />
