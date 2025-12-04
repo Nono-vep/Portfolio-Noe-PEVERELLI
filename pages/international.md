@@ -31,7 +31,7 @@ As part of the engineering curriculum at ENSEEIHT, international mobility is a k
   </div>
 
   <div style="flex: 1; display: flex; justify-content: center;">
-    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/Safran_logo_2016.svg/640px-Safran_logo_2016.svg.png" height="150" %}
+    {% include image-gallery.html images="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Safran_2016_logo.svg/langfr-2560px-Safran_2016_logo.svg.png" height="150" %}
   </div>
 </div>
 
