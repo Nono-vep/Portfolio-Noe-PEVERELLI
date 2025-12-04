@@ -1,5 +1,5 @@
 ---
-layout : wrapper
+layout : post
 folder: mobility-project
 title: "International Mobility"
 permalink: /international/
