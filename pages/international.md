@@ -2,13 +2,6 @@
 layout: post
 folder : mobility-project
 title: "International"
-description: Exploration of global industrial and academic opportunities specializing in Power Electronics, Energy Conversion, and the "More Electric Aircraft."
-skills: 
-  - Power Electronics
-  - Intercultural Communication
-  - Energy Conversion Systems
-  - Grid Integration
-  - Electric Propulsion
 permalink: /international/
 main-image: https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop
 ---
