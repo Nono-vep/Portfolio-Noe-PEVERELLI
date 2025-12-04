@@ -9,7 +9,7 @@ skills:
   - Energy Conversion Systems
   - Grid Integration
   - Electric Propulsion
-
+permalink: /international/
 main-image: mobility_cover.jpg
 ---
 
