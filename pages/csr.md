@@ -28,6 +28,8 @@ For me, engineering with impact means ensuring that our pursuit of performanceâ€
     </p>
   </div>
 
-  {% include image-gallery.html images="https://freesvg.org/img/dchandlr_dchandlr_work.png.png" height="150" %}
+  <div style="flex: 1; display: flex; justify-content: center;">
+    {% include image-gallery.html images="https://freesvg.org/img/dchandlr_dchandlr_work.png.png" height="150" %}
+  </div>
 
 </div>
