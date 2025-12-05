@@ -2,94 +2,69 @@
 layout: post
 title: "Induction Motor Kart"
 folder: "project-1"
-description:   
-    
+description: "Retrofitting a thermal kart with an electric propulsion system: mechanical integration, power and control wiring, and drive parameterization."
 skills: 
-  - Motor Control
-  - Motor Transmission
-  - Electrical systems integration
-  - Electrical Schematic 
-  - Mechanical Calculus
+  - Variable Speed Drive (Curtis 1236E)
+  - Electrical Wiring (Power & Command)
+  - Mechanical Integration
+  - Electrical Schematics
+  - System Dimensioning
 main-image: "IMG_8861.jpeg"
-categories: ["Project"]
 ---
 
+During this SAE project, we worked on commissioning the electric propulsion system of a kart, focusing on three main areas:
+1.  **Command and Power Systems** (Drive and Batteries).
+2.  **Mechanical Integration** (Braking and Transmission).
+3.  **Parameterization and Testing**.
 
-During this project, we worked on three parts of the kart : 
-1. Command
-2. Motor drive
-3. Motor transmission
+### Braking System Integration
 
-First we added a brake system on the kart :
+Initially, the chassis did not have a functional braking system. We had to fully integrate the hydraulic circuit:
+* Installed the caliper and brake pads on the existing rear shaft disc.
+* Mounted the master cylinder to the chassis using a custom-machined plate.
+* Connected the brake pedal to the master cylinder using a threaded rod linkage.
+
 {% include image-gallery.html images='IMG_8861.jpeg' height="600" %}
 
-After that, we studied the motor drive and how to command it : 
-{% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
+### Motor Drive Wiring and Study
 
-With the datasheet, we drew the electrical diagram and we implement it on the kart :
-{% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
+We used a **Curtis 1236E** variable speed drive powered by 48V (four 12V 52Ah batteries in series) to control the 4 kW Leroy Somer asynchronous motor. This drive allows for 4-quadrant operation, enabling energy recovery during braking.
 
-Pour ajouter une vidéo :
-<video width="100%" controls muted loop style="border-radius: 8px;">
-  <source src="lien_vers_ta_video.mp4" type="video/mp4">
-  Ton navigateur ne supporte pas la vidéo.
-</video>
 
-Pour ajouter un diaporama :
-<div class="carousel-container">
-    <div class="carousel-slide">
-        <img src="assets/img/image1.jpg">
-    </div>
-    <div class="carousel-slide">
-        <img src="assets/img/image2.jpg">
-    </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
 
-At the end, the kart didn't work because of a problem on the transmission part and we didn't have enough time to correct it. 
+Based on the documentation, we designed and implemented the wiring schematic:
+* **Power Circuit:** Wired the batteries in series with a 200A fuse and an emergency stop switch, then connected them to the drive terminals (U, V, W, B+, B-). We had to crimp and extend certain power cables that were too short.
+* **Control Circuit:** Wired the 35-pin connector, including the forward/reverse selector, the accelerator pedal (5kΩ potentiometer), and the motor sensors.
 
-What I learned : 
+### Parameterization and Electrical Schematic
+
+The drive was configured using the **Curtis 1313** console with the following parameters for Speed Mode:
+* *Speed Mode - Max Speed*: 3600 rpm (synchronous speed).
+* *Throttle Type*: Type 1 (Potentiometer).
+* *Nominal Voltage*: 48 V.
 
 {% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
 
-# Header 1 
-Used for the title (already generated automatically at the top)
-## Header 2  
-Use this for the header of each section
-### Header 3 
-Use this to have subsection if needed
+### Testing and Conclusion
+
+We performed theoretical calculations showing that a motor torque of 5.06 N.m is required to start, and the estimated autonomy is approximately 31 minutes at nominal speed.
+
+During practical testing, we encountered a major issue with the **transmission**:
+* The belt consistently loosened when driving.
+* Despite adjusting the tensioner roller and the motor position, the motor pinion eventually broke due to improper installation.
+
+As a result, the kart could not be driven on the track, but we validated the electrical operation and motor rotation on the test bench (measured speed of 400 rpm for a 15Hz setpoint).
+
+**What I learned:**
+* The importance of precision in control wiring (terminal blocks, crimping).
+* The complexity of mechanical integration (transmission alignment) on an existing system.
+* How to use industrial parameterization tools (Curtis Console).
+
+{% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
 
 
-
-## Adding a hozontal line
----
-
-## Starting a new line
-leave two spaces "  " at the end or enter <br>
-
-## Adding bold text
-this is how you input **bold text**
-
-## Adding italic text
-Italicized text is the *cat's meow*.
-
-
-
-## Adding block quote
-> A blockquote would look great if you need to highlight something
-
-
-## Adding table 
-
-| Header 1 | Header 2 |
-|----------|----------|
-| Row 1, Col 1 | Row 1, Col 2 |
-| Row 2, Col 1 | Row 2, Col 2 |
-
-make sure to leave aline betwen the table and the header
-
-
-
-
-
+| Component | Specification |
+|-----------|---------------|
+| Motor     | Asynchronous 4kW |
+| Battery   | 48V (4x12V)   |
+| Drive     | Curtis 1236E  |
