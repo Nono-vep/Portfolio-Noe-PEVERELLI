@@ -1,4 +1,3 @@
-
 ---
 layout: post2
 folder: "csr-project"
