@@ -4,7 +4,7 @@ folder: "csr-project"
 title: "CSR & Civic Engagement"
 permalink: /csr/
 description: "Reflecting on the ethical responsibilities of engineering and the importance of Corporate Social Responsibility (CSR) in the transition to More Electric Aircraft."
-main-image: "CSR_Header.png"
+main-image: "CSR.png"
 ---
 
 ## The Importance of CSR in Power Electronics & Aviation
