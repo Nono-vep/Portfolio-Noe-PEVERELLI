@@ -1,6 +1,6 @@
 
 ---
-layout : post2
+layout: post2
 folder: "csr-project"
 title: "CSR & Civic Engagement"
 permalink: /csr/
