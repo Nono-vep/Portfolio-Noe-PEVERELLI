@@ -1,3 +1,6 @@
+---
+---
+
 :root {
   --text-color: {{ site.colors.text }};
   --border-color: {{ site.colors.border }};
@@ -374,7 +377,6 @@ nav .mobile-nav {
 }
 
 
-
 /* SECTION 3: SKILLS */
 .skills-section {
     margin-bottom: 100px;
@@ -590,7 +592,7 @@ footer p {
 
 .post-view {
     margin: 25px auto;
-    border: 1px solid rgba(0, 0, 0, 0.05);     
+    border: 1px solid rgba(0, 0, 0, 0.05);    
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
                   0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 10px
@@ -753,7 +755,7 @@ footer p {
 
 
 
-/* Responsive styles     */
+/*     Responsive styles     */
 
 @media (max-width: 1200px){
     body{
@@ -764,7 +766,7 @@ footer p {
     .hero-section {
         padding: 0 20px;
         border: none;
-        
+       
         
     }
     .hero-section .group{
@@ -781,7 +783,7 @@ footer p {
     }
     
 
-    /* Section 2: Project-grid  */
+    /*   Section 2: Project-grid  */
     .project-grid-section .grid-container .project-card {
         max-width: 500px;
         height: 500px; 
