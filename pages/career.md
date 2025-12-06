@@ -4,7 +4,7 @@ folder: "career-project"
 title: "Career & Networking"
 permalink: /career/
 description: "My professional identity: CVs, Elevator Pitch, and analysis of role models to shape my future as an engineer."
-main-image: "Career_Header.png"
+main-image: "Career.png"
 ---
 
 ## Professional Identity
