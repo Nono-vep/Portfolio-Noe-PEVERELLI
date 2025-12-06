@@ -43,19 +43,19 @@ One of the most important parts of my work was the **sensitivity analysis**. I s
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_5240.png" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5240.png" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_5241.png" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5241.png" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_5242.png" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5242.png" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_5243.png" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5243.png" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
