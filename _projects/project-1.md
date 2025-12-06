@@ -60,24 +60,26 @@ As a result, the kart could not be driven on the track, but we validated the ele
 * The complexity of mechanical integration (transmission alignment) on an existing system.
 * How to use industrial parameterization tools (Curtis Console).
 
-<div class="carousel-slide fade">
-    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8853.jpeg" style="width:100%">
-</div>
-
-<div class="carousel-slide fade">
-    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8860.jpeg" style="width:100%">
-</div>
-
-<div class="carousel-slide fade">
-    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8899.jpeg" style="width:100%">
-</div>
-
-<div class="carousel-slide fade">
-    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.jpeg" style="width:100%">
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="carousel-container">
+  <div class="carousel-slide fade">
+      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8853.jpeg" style="width:100%">
+  </div>
+  
+  <div class="carousel-slide fade">
+      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8860.jpeg" style="width:100%">
+  </div>
+  
+  <div class="carousel-slide fade">
+      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8899.jpeg" style="width:100%">
+  </div>
+  
+  <div class="carousel-slide fade">
+      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div>
 
 
 | Component | Specification |
