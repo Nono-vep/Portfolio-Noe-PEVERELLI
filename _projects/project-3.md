@@ -10,7 +10,7 @@ skills:
   - Component Sizing & Thermal Analysis
   - Testing & Debugging
 math: true
-main-image: "Solar_Converter_PCB.jpg"
+main-image: "IMG_5541.png"
 ---
 
 In the context of the **Angers Solar Challenge**, our group (Group 221) had to design and manufacture a power conversion card. The objective was to interface a solar panel with a bank of supercapacitors to power a small electric vehicle.
@@ -26,6 +26,7 @@ The power stage consists of:
 * **Switch:** IRF540 MOSFET (Low $R_{DS(on)}$ to minimize conduction losses).
 * **Diode:** MBR745 Schottky Diode (Low forward voltage drop $V_F$ for efficiency).
 
+{% include image-gallery.html images='IMG_5542.jpeg' height="600" %}
 
 ### Sizing and Calculations
 
@@ -50,7 +51,7 @@ To protect the supercapacitors, we implemented a **Charge Stop (Shutdown)** mech
 
 When the output voltage reaches 27V, the comparator triggers the shutdown pin of the SG3524, effectively cutting off the PWM signal.
 
-{% include image-gallery.html images='Typon_PCB.png' height="600" %}
+{% include image-gallery.html images='IMG_8168.jpeg' height="600" %}
 
 ### PCB Realization and Testing
 
@@ -64,7 +65,36 @@ After designing the schematic and routing the PCB (Typon), we manufactured the b
 * **PCB Constraints:** Routing power tracks requires careful consideration of current density and parasitic inductance.
 * **Debugging:** The step-by-step testing procedure was crucial to identify issues before connecting expensive components like supercapacitors.
 
-{% include image-gallery.html images='Oscilloscope_PWM.png, Setup_Photo.jpg' height="600" %}
+<div class="carousel-container">
+
+    <div class="carousel-slide fade">
+        <img src="assets/images/projects/project-3/IMG_8106.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="assets/images/projects/project-3/IMG_8109.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="assets/images/projects/project-3/IMG_8131.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="assets/images/projects/project-3/IMG_8145.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="assets/images/projects/project-3/IMG_8602.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="assets/images/projects/project-3/IMG_8603.jpeg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
 
 
 | Component | Value | Ref |
@@ -73,4 +103,3 @@ After designing the schematic and routing the PCB (Typon), we manufactured the b
 | MOSFET    | IRF540| Q1  |
 | Controller| SG3524| U1  |
 
-Make sure to leave a line between the table and the text.
