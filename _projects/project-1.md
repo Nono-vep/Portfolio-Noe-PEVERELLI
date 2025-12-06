@@ -9,7 +9,7 @@ skills:
   - Mechanical Integration
   - Electrical Schematics
   - System Dimensioning
-main-image: "IMG_8861.jpeg"
+main-image: "IMG_8821.jpeg"
 ---
 
 During this SAE project, we worked on commissioning the electric propulsion system of a kart, focusing on three main areas:
@@ -24,17 +24,18 @@ Initially, the chassis did not have a functional braking system. We had to fully
 * Mounted the master cylinder to the chassis using a custom-machined plate.
 * Connected the brake pedal to the master cylinder using a threaded rod linkage.
 
-{% include image-gallery.html images='IMG_8861.jpeg' height="600" %}
+{% include image-gallery.html images='IMG_8838.jpeg' height="600" %}
 
 ### Motor Drive Wiring and Study
 
 We used a **Curtis 1236E** variable speed drive powered by 48V (four 12V 52Ah batteries in series) to control the 4 kW Leroy Somer asynchronous motor. This drive allows for 4-quadrant operation, enabling energy recovery during braking.
 
-
-
 Based on the documentation, we designed and implemented the wiring schematic:
 * **Power Circuit:** Wired the batteries in series with a 200A fuse and an emergency stop switch, then connected them to the drive terminals (U, V, W, B+, B-). We had to crimp and extend certain power cables that were too short.
 * **Control Circuit:** Wired the 35-pin connector, including the forward/reverse selector, the accelerator pedal (5kΩ potentiometer), and the motor sensors.
+
+{% include image-gallery.html images='IMG_8859.jpeg' height="600" %}
+
 
 ### Parameterization and Electrical Schematic
 
@@ -43,7 +44,7 @@ The drive was configured using the **Curtis 1313** console with the following pa
 * *Throttle Type*: Type 1 (Potentiometer).
 * *Nominal Voltage*: 48 V.
 
-{% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
+
 
 ### Testing and Conclusion
 
@@ -60,7 +61,20 @@ As a result, the kart could not be driven on the track, but we validated the ele
 * The complexity of mechanical integration (transmission alignment) on an existing system.
 * How to use industrial parameterization tools (Curtis Console).
 
-{% include image-gallery.html images='IMG_8861.jpeg, IMG_8821.jpeg' height="600" %}
+<div class="carousel-slide fade">
+    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8853.jpeg" style="width:100%">
+</div>
+
+<div class="carousel-slide fade">
+    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8860.jpeg" style="width:100%">
+</div>
+
+<div class="carousel-slide fade">
+    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8899.jpeg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 
 | Component | Specification |
