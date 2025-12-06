@@ -74,7 +74,7 @@ As a result, the kart could not be driven on the track, but we validated the ele
   </div>
   
   <div class="carousel-slide fade">
-      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.jpeg" style="width:100%">
+      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.png" style="width:100%">
   </div>
   
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
