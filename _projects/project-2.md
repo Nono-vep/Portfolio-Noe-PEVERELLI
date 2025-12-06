@@ -10,7 +10,7 @@ skills:
   - Python Scripting
   - Experimental Measurements
 main-image: "IMG_RLC_Simu.jpeg" # Replace with your actual filename
-categories: ["Internship", "Aeronautics"]
+math : true
 ---
 
 During my internship at **Parker Meggitt**, I worked on the feasibility study of a resonant DC/DC Converter for the aerospace industry.
