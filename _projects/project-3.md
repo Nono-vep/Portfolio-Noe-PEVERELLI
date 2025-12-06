@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Solar MPPT Boost Converter"
-folder: "solar-challenge"
+folder: "project-3"
 description: "Design, sizing, and manufacturing of an analog MPPT Boost converter to charge supercapacitors for a solar-powered vehicle."
 skills: 
   - Power Electronics (Boost Topology)
@@ -10,7 +10,7 @@ skills:
   - Component Sizing & Thermal Analysis
   - Testing & Debugging
 math: true
-main-image: "Solar_Converter_PCB.jpg" # Replace with your actual photo
+main-image: "Solar_Converter_PCB.jpg"
 ---
 
 In the context of the **Angers Solar Challenge**, our group (Group 221) had to design and manufacture a power conversion card. The objective was to interface a solar panel with a bank of supercapacitors to power a small electric vehicle.
