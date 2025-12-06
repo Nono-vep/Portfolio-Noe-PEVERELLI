@@ -3,7 +3,7 @@
 
     <div class="skills-grid">
         
-        <div class="skill-card">
+        <div class="skill-category">
             <div class="card-header">
                 <span class="icon">⚡</span>
                 <h3>PCB Design & Electronics</h3>
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="skill-card">
+        <div class="skill-category">
             <div class="card-header">
                 <span class="icon">💻</span>
                 <h3>Software & Simulation</h3>
@@ -33,70 +33,3 @@
 
     </div>
 </section>
-
-<style>
-    /* Configuration de la grille globale */
-    .skills-grid {
-        display: grid;
-        /* Crée 2 colonnes automatiques, ou 1 seule sur mobile */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-        gap: 25px;
-        width: 100%;
-    }
-
-    /* Style des cartes individuelles */
-    .skill-card {
-        background-color: rgba(255, 255, 255, 0.05); /* Fond subtil (compatible dark/light mode) */
-        border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure légère */
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Effet au survol de la carte */
-    .skill-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        border-color: var(--link-color, #0056b3); /* S'illumine avec la couleur du thème */
-    }
-
-    /* En-tête de la carte (Icône + Titre) */
-    .card-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        border-bottom: 2px solid rgba(0,0,0,0.05);
-        padding-bottom: 10px;
-    }
-
-    .card-header .icon {
-        font-size: 24px;
-        margin-right: 10px;
-    }
-
-    .skill-card h3 {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 0;
-        color: var(--text-color, #333);
-    }
-
-    /* Conteneur des badges à l'intérieur de la carte */
-    .badges-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    /* Style des images/badges */
-    .badges-wrapper img {
-        height: 30px;
-        border-radius: 4px;
-        transition: transform 0.2s;
-    }
-
-    .badges-wrapper img:hover {
-        transform: scale(1.05);
-    }
-</style>
