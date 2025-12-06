@@ -65,19 +65,19 @@ Once the PCB was manufactured, I soldered the components (including Surface Moun
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6191.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6191.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6352.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6352.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6368.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6368.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6369.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6369.jpeg" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
