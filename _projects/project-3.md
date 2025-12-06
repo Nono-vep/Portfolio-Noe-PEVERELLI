@@ -10,7 +10,7 @@ skills:
   - Component Sizing & Thermal Analysis
   - Testing & Debugging
 math: true
-main-image: "IMG_5641.png"
+main-image: "IMG_5641.PNG"
 ---
 
 In the context of the **Angers Solar Challenge**, our group (Group 221) had to design and manufacture a power conversion card. The objective was to interface a solar panel with a bank of supercapacitors to power a small electric vehicle.
@@ -26,7 +26,7 @@ The power stage consists of:
 * **Switch:** IRF540 MOSFET (Low $R_{DS(on)}$ to minimize conduction losses).
 * **Diode:** MBR745 Schottky Diode (Low forward voltage drop $V_F$ for efficiency).
 
-{% include image-gallery.html images='IMG_5642.jpeg' height="600" %}
+{% include image-gallery.html images='IMG_5642.PNG' height="600" %}
 
 ### Sizing and Calculations
 
@@ -68,27 +68,27 @@ After designing the schematic and routing the PCB (Typon), we manufactured the b
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="assets/images/projects/project-3/IMG_8106.jpeg" style="width:100%">
+        <img src="/assets/images/projects/project-3/IMG_8106.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="assets/images/projects/project-3/IMG_8109.jpeg" style="width:100%">
+        <img src="/assets/images/projects/project-3/IMG_8109.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="assets/images/projects/project-3/IMG_8131.jpeg" style="width:100%">
+        <img src="/assets/images/projects/project-3/IMG_8131.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="assets/images/projects/project-3/IMG_8145.jpeg" style="width:100%">
+        <img src="/assets/images/projects/project-3/IMG_8145.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="assets/images/projects/project-3/IMG_8602.jpeg" style="width:100%">
+        <img src="/assets/images/projects/project-3/IMG_8602.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="assets/images/projects/project-3/IMG_8603.jpeg" style="width:100%">
+        <img src="/assets/images/projects/project-3/IMG_8603.jpeg" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
