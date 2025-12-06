@@ -10,7 +10,7 @@ skills:
   - Functional Testing
   - Soldering (CMS & Through-hole)
 math: true
-main-image: "Ampli_Carte_Noe.jpg" # Replace with your actual photo
+main-image: "IMG_5640.png" # Replace with your actual photo
 ---
 
 During my first year of BUT, I worked on the design of an audio processing card for an analog amplifier. The goal was to create specific audio effects to insert between the pre-amplifier and the power amplifier.
@@ -31,6 +31,9 @@ For the Wah-wah effect, I used a band-pass filter structure where the resonance 
 * By varying the resistance, I could shift the resonance peak, creating the characteristic "Wah-wah" sound.
 * I verified the frequency response using Bode plots in LTSpice.
 
+{% include image-gallery.html images='IMG_5541.png' height="600" %}
+
+{% include image-gallery.html images='IMG_5540.png' height="600" %}
 
 ### PCB Design and Routing
 
@@ -39,7 +42,6 @@ After validating the schematics, I moved to the routing phase using **Eagle** so
 * I placed decoupling capacitors ($100 nF$) close to the integrated circuits to minimize noise.
 * I chose a slide potentiometer for the Wah-wah effect to make it easier to use during demonstration.
 
-{% include image-gallery.html images='Ampli_Typon.png' height="600" %}
 
 ### Assembly and Testing
 
@@ -59,4 +61,27 @@ Once the PCB was manufactured, I soldered the components (including Surface Moun
 * **PCB Rigor:** The importance of component placement to facilitate routing and debugging.
 * **Debugging:** How to troubleshoot a board step-by-step when the output doesn't match the simulation.
 
-{% include image-gallery.html images='Ampli_Oscillo.png, Ampli_Final.jpg' height="600" %}
+
+<div class="carousel-container">
+
+    <div class="carousel-slide fade">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6191.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6352.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6368.jpeg" style="width:100%">
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_6369.jpeg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
