@@ -1,23 +1,15 @@
 <section id="skills" class="skills-section">
     <h2>Technical Skills</h2>
 
-    <div class="skills-container">
+    <div class="skills-grid">
         
-        <div class="skill-category">
-            <h3>3D Modeling & CAD</h3>
-            <div class="badges-wrapper">
-                <img src="https://img.shields.io/badge/SolidWorks-D22026?style=for-the-badge&logo=solidworks&logoColor=white" alt="SolidWorks">
-                <img src="https://img.shields.io/badge/CATIA-005685?style=for-the-badge&logo=dassault-systemes&logoColor=white" alt="CATIA">
-                <img src="https://img.shields.io/badge/Fusion%20360-F57826?style=for-the-badge&logo=autodeskfusion360&logoColor=white" alt="Fusion 360">
-                <img src="https://img.shields.io/badge/Blender-E86F00?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
-                <img src="https://img.shields.io/badge/Onshape-1E5AA8?style=for-the-badge&logo=onshape&logoColor=white" alt="Onshape">
+        <div class="skill-card">
+            <div class="card-header">
+                <span class="icon">⚡</span>
+                <h3>PCB Design & Electronics</h3>
             </div>
-        </div>
-
-        <div class="skill-category">
-            <h3>PCB Design & Electronics</h3>
             <div class="badges-wrapper">
-                <img src="https://img.shields.io/badge/Altium_Designer-A5915F?style=for-the-badge&logo=altiumdesigner&logoColor=white" alt="Altium">
+                <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32">
                 <img src="https://img.shields.io/badge/KiCad-314CB0?style=for-the-badge&logo=kicad&logoColor=white" alt="KiCad">
                 <img src="https://img.shields.io/badge/Eagle-A51C30?style=for-the-badge&logo=autodesk&logoColor=white" alt="Eagle">
                 <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino">
@@ -25,23 +17,17 @@
             </div>
         </div>
 
-        <div class="skill-category">
-            <h3>Prototyping & Tools</h3>
-            <div class="badges-wrapper">
-                <img src="https://img.shields.io/badge/3D_Printing-1b1b1b?style=for-the-badge&logo=bambulab&logoColor=white" alt="3D Printing">
-                <img src="https://img.shields.io/badge/CNC_Machining-4B4B4B?style=for-the-badge&logo=cnc&logoColor=white" alt="CNC">
-                <img src="https://img.shields.io/badge/Laser_Cutting-FF0000?style=for-the-badge&logoColor=white" alt="Laser Cutting">
-                 <img src="https://img.shields.io/badge/MATLAB-ED2C24?style=for-the-badge&logo=mathworks&logoColor=white" alt="Matlab">
+        <div class="skill-card">
+            <div class="card-header">
+                <span class="icon">💻</span>
+                <h3>Software & Simulation</h3>
             </div>
-        </div>
-
-        <div class="skill-category">
-            <h3>Programming & Soft</h3>
             <div class="badges-wrapper">
-                <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
                 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                <img src="https://img.shields.io/badge/Office_365-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white" alt="Office">
+                <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" alt="C Language">
+                <img src="https://img.shields.io/badge/PLC_Programming-005696?style=for-the-badge&logo=siemens&logoColor=white" alt="PLC Programming">
+                <img src="https://img.shields.io/badge/LTSpice-231F20?style=for-the-badge&logo=analogdevices&logoColor=white" alt="LTSpice">
+                <img src="https://img.shields.io/badge/Matlab_Simulink-ED2C24?style=for-the-badge&logo=mathworks&logoColor=white" alt="Matlab Simulink">
             </div>
         </div>
 
@@ -49,34 +35,59 @@
 </section>
 
 <style>
-    .skills-container {
+    /* Configuration de la grille globale */
+    .skills-grid {
+        display: grid;
+        /* Crée 2 colonnes automatiques, ou 1 seule sur mobile */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 25px;
+        width: 100%;
+    }
+
+    /* Style des cartes individuelles */
+    .skill-card {
+        background-color: rgba(255, 255, 255, 0.05); /* Fond subtil (compatible dark/light mode) */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure légère */
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Effet au survol de la carte */
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        border-color: var(--link-color, #0056b3); /* S'illumine avec la couleur du thème */
+    }
+
+    /* En-tête de la carte (Icône + Titre) */
+    .card-header {
         display: flex;
-        flex-direction: column;
-        gap: 30px;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+        padding-bottom: 10px;
     }
 
-    .skill-category h3 {
+    .card-header .icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .skill-card h3 {
         font-size: 18px;
-        color: var(--text-color);
-        margin-bottom: 15px;
-        border-left: 4px solid var(--link-color); /* Petite barre bleue esthétique */
-        padding-left: 10px;
+        font-weight: 600;
+        margin: 0;
+        color: var(--text-color, #333);
     }
 
+    /* Conteneur des badges à l'intérieur de la carte */
     .badges-wrapper {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px; /* Espace entre les badges */
+        gap: 12px;
     }
 
-    /* Petit effet de zoom au survol des badges */
+    /* Style des images/badges */
     .badges-wrapper img {
-        transition: transform 0.2s ease;
-        border-radius: 4px; /* Coins légèrement arrondis */
-        height: 28px; /* Hauteur uniforme */
-    }
-    
-    .badges-wrapper img:hover {
-        transform: translateY(-3px);
-    }
-</style>
