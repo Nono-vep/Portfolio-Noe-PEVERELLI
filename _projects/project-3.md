@@ -68,27 +68,27 @@ After designing the schematic and routing the PCB (Typon), we manufactured the b
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="/assets/images/projects/project-3/IMG_8106.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8106.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/assets/images/projects/project-3/IMG_8109.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8109.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/assets/images/projects/project-3/IMG_8131.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8131.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/assets/images/projects/project-3/IMG_8145.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8145.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/assets/images/projects/project-3/IMG_8602.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8602.jpeg" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/assets/images/projects/project-3/IMG_8603.jpeg" style="width:100%">
+        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8603.jpeg" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
