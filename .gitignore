@@ -1,0 +1,21 @@
+# Dossier généré par Jekyll (ne jamais commiter)
+_site/
+
+# Cache Jekyll
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Fichiers temporaires
+.DS_Store
+Thumbs.db
+
+# Node (si un jour tu ajoutes un thème ou un builder JS)
+node_modules/
+
+# Fichiers de logs
+*.log
+
+# fichiers Ruby/Bundler (peut apparaître si tu utilises Jekyll en local)
+vendor/
+.bundle/
