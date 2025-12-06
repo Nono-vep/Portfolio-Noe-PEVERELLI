@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Audio Amplifier PCB Design"
-folder: "audio-amplifier"
+folder: "project-4"
 description: "Design, simulation, and routing of an audio processing card featuring a low-pass filter and a Wah-wah effect for an analog amplifier."
 skills: 
   - PCB Design (Eagle)
@@ -11,7 +11,6 @@ skills:
   - Soldering (CMS & Through-hole)
 math: true
 main-image: "Ampli_Carte_Noe.jpg" # Replace with your actual photo
-categories: ["Project", "PCB Design"]
 ---
 
 During my first year of BUT, I worked on the design of an audio processing card for an analog amplifier. The goal was to create specific audio effects to insert between the pre-amplifier and the power amplifier.
