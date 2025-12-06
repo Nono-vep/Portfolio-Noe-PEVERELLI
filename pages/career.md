@@ -18,7 +18,7 @@ As required for the international market, I maintain my CV in both English and F
 
 <div style="display: flex; justify-content: center; gap: 50px; margin: 40px 0;">
   <div style="text-align: center;">
-    <a href="/assets/files/CV_English.pdf" target="_blank">
+    <a href="/assets/resume/CV-Peverelli-Noe-English.pdf" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" width="80" alt="CV English">
       <p><strong>Resume in English</strong></p>
     </a>
