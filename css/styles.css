@@ -1019,51 +1019,55 @@ footer p {
 }
 
 /* --- CAROUSEL FIX --- */
+<style>
+/* 1. Le conteneur sert de repère */
 .carousel-container {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto;
-    overflow: hidden;
+  position: relative; /* IMPORTANT : permet aux flèches de se fixer par rapport à ce cadre */
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden; /* Cache ce qui dépasse */
 }
 
-.carousel-slide {
-    display: none;
-}
-
+/* 2. Les images */
 .carousel-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;   /* important */
+  width: 100%;
+  display: block; /* Évite les petits espaces blancs sous les images */
+  /* Optionnel : fixe une hauteur identique pour toutes les images pour éviter que le bas de page ne saute */
+  /* height: 500px; */ 
+  /* object-fit: cover; */ 
 }
 
-/* Show the active slide */
-.carousel-slide.active {
-    display: block;
-}
-
-/* Fade effect */
-.fade {
-    animation: fadeEffect 0.8s;
-}
-
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to   { opacity: 1; }
-}
-
-/* Buttons */
+/* 3. Les flèches fixes */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 12px;
-    font-size: 24px;
-    background: rgba(255,255,255,0.7);
-    border-radius: 50%;
-    user-select: none;
+  cursor: pointer;
+  position: absolute; /* C'est ça qui les empêche de bouger */
+  top: 50%; /* Place le haut du bouton au milieu du conteneur */
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 10; /* S'assure qu'elles sont au-dessus de l'image */
+  
+  /* Astuce pour centrer parfaitement verticalement */
+  transform: translateY(-50%); 
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+/* Positionnement spécifique */
+.next {
+  right: 0; /* Collé à droite */
+  border-radius: 3px 0 0 3px;
+}
 
+.prev {
+  left: 0; /* Collé à gauche */
+  border-radius: 0 3px 3px 0;
+}
+
+/* Petit effet au survol (optionnel) */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
