@@ -36,7 +36,6 @@ Based on the documentation, we designed and implemented the wiring schematic:
 
 {% include image-gallery.html images='IMG_8859.jpeg' height="600" %}
 
-
 ### Parameterization and Electrical Schematic
 
 The drive was configured using the **Curtis 1313** console with the following parameters for Speed Mode:
@@ -44,7 +43,7 @@ The drive was configured using the **Curtis 1313** console with the following pa
 * *Throttle Type*: Type 1 (Potentiometer).
 * *Nominal Voltage*: 48 V.
 
-
+{% include image-gallery.html images='IMG_5141.png, IMG_5142.png' height="600" %}
 
 ### Testing and Conclusion
 
@@ -71,6 +70,10 @@ As a result, the kart could not be driven on the track, but we validated the ele
 
 <div class="carousel-slide fade">
     <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8899.jpeg" style="width:100%">
+</div>
+
+<div class="carousel-slide fade">
+    <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.jpeg" style="width:100%">
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
