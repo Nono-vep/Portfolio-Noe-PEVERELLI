@@ -10,7 +10,7 @@ skills:
   - Component Sizing & Thermal Analysis
   - Testing & Debugging
 math: true
-main-image: "IMG_5541.png"
+main-image: "IMG_5641.png"
 ---
 
 In the context of the **Angers Solar Challenge**, our group (Group 221) had to design and manufacture a power conversion card. The objective was to interface a solar panel with a bank of supercapacitors to power a small electric vehicle.
@@ -26,7 +26,7 @@ The power stage consists of:
 * **Switch:** IRF540 MOSFET (Low $R_{DS(on)}$ to minimize conduction losses).
 * **Diode:** MBR745 Schottky Diode (Low forward voltage drop $V_F$ for efficiency).
 
-{% include image-gallery.html images='IMG_5542.jpeg' height="600" %}
+{% include image-gallery.html images='IMG_5642.jpeg' height="600" %}
 
 ### Sizing and Calculations
 
