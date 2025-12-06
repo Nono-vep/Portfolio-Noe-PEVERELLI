@@ -1020,54 +1020,71 @@ footer p {
 
 /* --- CAROUSEL FIX --- */
 <style>
-/* 1. Le conteneur sert de repère */
-.carousel-container {
-  position: relative; /* IMPORTANT : permet aux flèches de se fixer par rapport à ce cadre */
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden; /* Cache ce qui dépasse */
-}
+    /* 1. LA BOÎTE RIGIDE (Le Cadre) */
+    .carousel-container {
+        position: relative;
+        max-width: 800px; /* Largeur max de ton diaporama */
+        margin: auto;
+        
+        /* C'EST ICI QUE TOUT SE JOUE : On force une hauteur fixe */
+        height: 500px; 
+        
+        background-color: #f0f0f0; /* Gris clair pour voir le cadre si l'image est petite */
+        border-radius: 8px; /* Un peu d'arrondi c'est plus joli */
+        overflow: hidden; /* Coupe tout ce qui dépasse */
+    }
 
-/* 2. Les images */
-.carousel-slide img {
-  width: 100%;
-  display: block; /* Évite les petits espaces blancs sous les images */
-  /* Optionnel : fixe une hauteur identique pour toutes les images pour éviter que le bas de page ne saute */
-  /* height: 500px; */ 
-  /* object-fit: cover; */ 
-}
+    /* 2. LES DIAPOSITIVES */
+    .carousel-slide {
+        display: none; /* Caché par défaut */
+        height: 100%;  /* Prend toute la hauteur du cadre */
+        width: 100%;   /* Prend toute la largeur */
+    }
 
-/* 3. Les flèches fixes */
-.prev, .next {
-  cursor: pointer;
-  position: absolute; /* C'est ça qui les empêche de bouger */
-  top: 50%; /* Place le haut du bouton au milieu du conteneur */
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  user-select: none;
-  z-index: 10; /* S'assure qu'elles sont au-dessus de l'image */
-  
-  /* Astuce pour centrer parfaitement verticalement */
-  transform: translateY(-50%); 
-}
+    /* 3. LES IMAGES */
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        
+        /* MAGIE : "contain" affiche l'image en entier sans la couper.
+           Si tu préfères que ça remplisse tout (zoomé), mets "cover" */
+        object-fit: contain; 
+    }
 
-/* Positionnement spécifique */
-.next {
-  right: 0; /* Collé à droite */
-  border-radius: 3px 0 0 3px;
-}
+    /* Pour afficher la première image par défaut si le JS met du temps */
+    .carousel-slide:first-child {
+        display: block;
+    }
 
-.prev {
-  left: 0; /* Collé à gauche */
-  border-radius: 0 3px 3px 0;
-}
+    /* 4. LES FLÈCHES (Ne bougeront plus jamais) */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px; /* La moitié de la taille de la flèche pour être pile au centre */
+        color: white; /* Change en 'black' si le fond est clair */
+        background-color: rgba(0,0,0,0.3); /* Petit fond gris pour qu'on les voie toujours */
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.3s ease;
+        user-select: none;
+        z-index: 10;
+        border-radius: 3px;
+    }
 
-/* Petit effet au survol (optionnel) */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+        left: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
 </style>
