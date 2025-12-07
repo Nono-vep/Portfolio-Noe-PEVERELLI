@@ -57,7 +57,7 @@ Professional networking is a pillar of career development. My LinkedIn profile s
     </p>
   </div>
   <div style="flex: 2;">
-    {% include youtube-video.html id="YOUR_VIDEO_ID" autoplay="false" %}
+    {% include youtube-video.html id="https://youtu.be/P4Mpb7CEOvM" autoplay="false" %}
   </div>
 </div>
 
