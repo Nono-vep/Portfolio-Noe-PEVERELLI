@@ -68,7 +68,7 @@ Professional networking is a pillar of career development. My LinkedIn profile s
 To refine my career path, I have analyzed **two role model profiles**. These analyses help me project myself into specific job roles and understand the skills required in the industry.
 
 ### 1. Interview: Power Electronics Designer
-**Contact:** Tony Fourmont, Safran Electronics & Defense
+**Contact:** Tony Fourmont, Safran Electronics & Defense <br>
 **Source:** MyJobGlasses
 
 > **Synthesis of the exchange:**
