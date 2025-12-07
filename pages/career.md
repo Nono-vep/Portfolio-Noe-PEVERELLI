@@ -75,7 +75,7 @@ To refine my career path, I have analyzed **two role model profiles**. These ana
 > *Technical skills are not enough. Curiosity and rigor are just as essential. In our field, you can’t just guess things; you need to know exactly why you are doing something and what results to expect, especially when safety is involved. Power electronics isn't complicated, but nothing should be left to chance.*
 >
 > **Key Takeaway:**
-> *Always search your mind and constantly ask yourself questions*
+> *Always search your mind and constantly ask yourself questions !*
 
 <div style="text-align: center; margin: 30px 0;">
   <a href="www.linkedin.com/in/noé-peverelli-195991182" class="btn btn-primary" style="background-color: #0077b5; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
