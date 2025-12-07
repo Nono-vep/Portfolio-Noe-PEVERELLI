@@ -38,7 +38,7 @@ As required for the international market, I maintain my CV in both English and F
 Professional networking is a pillar of career development. My LinkedIn profile showcases my detailed experiences, endorsements, and professional activity.
 
 <div style="text-align: center; margin: 30px 0;">
-  <a href="PUT_YOUR_LINKEDIN_URL_HERE" class="btn btn-primary" style="background-color: #0077b5; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+  <a href="www.linkedin.com/in/noé-peverelli-195991182" class="btn btn-primary" style="background-color: #0077b5; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
     Connect on LinkedIn
   </a>
 </div>
@@ -57,7 +57,7 @@ Professional networking is a pillar of career development. My LinkedIn profile s
     </p>
   </div>
   <div style="flex: 2;">
-    {% include youtube-video.html id="https://youtu.be/P4Mpb7CEOvM" autoplay="false" %}
+    {% include youtube-video.html id="P4Mpb7CEOvM" autoplay="false" %}
   </div>
 </div>
 
