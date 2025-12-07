@@ -65,17 +65,17 @@ Professional networking is a pillar of career development. My LinkedIn profile s
 
 ## Role Model Analysis & Interviews
 
-To refine my career path, I have analyzed **three role model profiles**. These analyses help me project myself into specific job roles and understand the skills required in the industry.
+To refine my career path, I have analyzed **two role model profiles**. These analyses help me project myself into specific job roles and understand the skills required in the industry.
 
-### 1. Interview: [Role / Job Title 1]
-**Contact:** [Name of the person], [Company]  
-**Source:** [Alumni Interview / JobTeaser / etc.]
+### 1. Interview: [Power Electronics Designer]
+**Contact:** [Tony Fourmont], [Company]  
+**Source:** [MyJobGlasses]
 
 > **Synthesis of the exchange:**
-> *Écris ici la synthèse de ton premier entretien. Précise ce que tu as appris sur le quotidien du métier, les compétences techniques (Hard Skills) et humaines (Soft Skills) nécessaires, et comment cette personne a évolué dans sa carrière.*
+> *Technical skills are not enough. Curiosity and rigor are just as essential. In our field, you can’t just guess things; you need to know exactly why you are doing something and what results to expect, especially when safety is involved. Power electronics isn't complicated, but nothing should be left to chance.*
 >
 > **Key Takeaway:**
-> *Quel est le point clé que tu retiens pour ton propre projet ?*
+> *Always search your mind and constantly ask yourself questions*
 
 ### 2. Interview: [Role / Job Title 2]
 **Contact:** [Name of the person], [Company]  
@@ -87,17 +87,3 @@ To refine my career path, I have analyzed **three role model profiles**. These a
 > **Key Takeaway:**
 > *Quel est le point clé que tu retiens pour ton propre projet ?*
 
-### 3. Role Model Analysis: [Role / Job Title 3]
-**Source:** [MillionRoads / My Job Glasses / Online Research]
-
-> **Profile Analysis:**
-> [cite_start]*Comme le PDF demande 3 profils ("3 role model profiles analyzed" ), utilise cet espace pour le troisième. Si tu n'as pas fait d'interview, tu peux analyser un profil trouvé sur MillionRoads ou LinkedIn. Décris ici le parcours type de ce profil.*
->
-> **Alignment with Mobility:**
-> *Comment ce profil influence-t-il tes choix de mobilité internationale (présentés dans la section Mobility) ?*
-
----
-
-## Alignment with International Mobility
-
-Based on these exchanges and analyses, I have confirmed that my targets for international mobility (Safran UK/US, UPM, TUM) are perfectly aligned with the career path of a **Power Electronics Engineer**. The technical skills emphasized by these professionals (Grid integration, SiC technologies) are taught in the curriculums I have selected.
