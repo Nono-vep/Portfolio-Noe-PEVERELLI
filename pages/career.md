@@ -72,24 +72,16 @@ To refine my career path, I have analyzed **two role model profiles**. These ana
 **Source:** MyJobGlasses
 
 > **Synthesis of the exchange:**
-> *Technical skills are not enough. Curiosity and rigor are just as essential. In our field, you can’t just guess things; you need to know exactly why you are doing something and what results to expect, especially when safety is involved. Power electronics isn't complicated, but nothing should be left to chance.*
+> *Technical skills are not enough. Curiosity and rigor are just as essential. In our field, you can’t just guess things; you need to know exactly why you are doing something and what results to expect, especially when safety is involved. Power electronics isn't complicated, but the laws of physics must be respected (Ohm’s law, thermal...).*
 >
 > **Key Takeaway:**
 > *Always search your mind and constantly ask yourself questions !*
 
 <div style="text-align: center; margin: 30px 0;">
-  <a href="www.linkedin.com/in/noé-peverelli-195991182" class="btn btn-primary" style="background-color: #0077b5; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+  <a href="https://www.linkedin.com/in/tony-fourmont-b2b20373" class="btn btn-primary" style="background-color: #0077b5; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
     LinkedIn
   </a>
 </div>
 
-### 2. Interview: [Role / Job Title 2]
-**Contact:** [Name of the person], [Company]  
-**Source:** [Alumni Interview / LinkedIn / etc.]
 
-> **Synthesis of the exchange:**
-> *Écris ici la synthèse de ton deuxième entretien. Mentionne par exemple les défis actuels du secteur (ex: certification aéronautique, contraintes thermiques) dont vous avez discuté.*
->
-> **Key Takeaway:**
-> *Quel est le point clé que tu retiens pour ton propre projet ?*
 
