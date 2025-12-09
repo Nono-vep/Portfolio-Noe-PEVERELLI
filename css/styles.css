@@ -973,7 +973,7 @@ footer p {
 .typewriter {
   display: inline-block;
   overflow: hidden; /* Cache le texte qui n'est pas encore écrit */
-  border-right: .11m solid var(--link-color); /* Le curseur qui clignote */
+  border-right: .10em solid var(--link-color); /* Le curseur qui clignote */
   white-space: nowrap; /* Empêche le texte de passer à la ligne */
   margin: 0;
   
