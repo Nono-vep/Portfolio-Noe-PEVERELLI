@@ -83,5 +83,19 @@ To refine my career path, I have analyzed **two role model profiles**. These ana
   </a>
 </div>
 
+### 2. Interview: Power Electronics Designer
+**Contact:** Sylvain Mérine, Parker Meggitt <br>
+**Source:** Mentor during my internship
 
+> **Synthesis of the exchange:**
+> *My mentor taught me that in the aerospace industry, "trial and error" is simply not an option. Technical knowledge is just the foundation; the real requirement is absolute rigor. He insisted that before building anything, I had to master the underlying physics to predict exactly how the system would behave. He often said that safety relies on our ability to challenge every assumption rather than just trusting a simulation.*
+>
+> **Key Takeaway:**
+> *Predictability is key: never switch on a system unless you are certain of the outcome*
+
+<div style="text-align: center; margin: 30px 0;">
+  <a href="https://www.linkedin.com/in/sylvain-merine-0879aa252/" class="btn btn-primary" style="background-color: #0077b5; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+    LinkedIn
+  </a>
+</div>
 
