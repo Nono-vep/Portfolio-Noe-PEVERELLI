@@ -3,7 +3,7 @@
         <div class="text">
             <h2>
                 I'm <br>
-                <span class="typewriter">{{ site.name }}</span>
+                <span id="typewriter-text" class="typewriter" data-text="{{ site.name }}"></span>
                 
                 {% if site.external-links %}
                 <span class="external-links">
@@ -61,7 +61,7 @@
         align-items: center; 
         justify-content: space-between;
         gap: 30px; 
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
     .hero-section .text { flex: 1; }
 
@@ -73,26 +73,22 @@
         margin-bottom: 20px !important;
     }
 
-    /* === CORRECTION TYPEWRITER === */
+    /* === TYPEWRITER STABLE (JS) === */
     .typewriter {
         display: inline-block;
-        overflow: hidden; 
-        border-right: .15em solid #333;
+        /* Plus de width ni d'animation de largeur ici */
+        border-right: .15em solid #333; /* Le curseur */
         white-space: nowrap; 
         margin: 0;
-        width: 0;
-        /* Animation : 2s pour 13 étapes (13 lettres) */
-        animation: typing 2s steps(13, end) forwards, blink-caret .75s step-end infinite;
+        /* Seul le clignotement est géré par CSS */
+        animation: blink-caret .75s step-end infinite;
+        min-height: 1em; /* Empêche le saut de ligne au chargement */
     }
 
-    /* Largeur ajustée à 13.5ch (Noé PEVERELLI fait 13 caractères + un peu de marge) */
-    @keyframes typing { 
-        from { width: 0 } 
-        to { width: 12.5ch; } 
+    @keyframes blink-caret { 
+        from, to { border-color: transparent } 
+        50% { border-color: #333; } 
     }
-    
-    @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #333; } }
-
 
     /* 2. IMAGE (300px Rond parfait) */
     .hero-section .headshot img {
@@ -119,7 +115,7 @@
     .oscillo-container {
         position: relative; width: 100%; height: 200px; 
         background-color: #ffffff; overflow: hidden; border-bottom: 1px solid #e0e0e0;
-        margin-top: 60px; z-index: 1; 
+        margin-top: 40px; z-index: 1; 
     }
     canvas#oscilloCanvas { display: block; width: 100%; height: 100%; }
 
@@ -130,6 +126,26 @@
         .typewriter { margin: 0 auto; }
     }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const element = document.getElementById("typewriter-text");
+    const text = element.getAttribute("data-text");
+    element.innerHTML = ""; // On vide le texte initial
+    let index = 0;
+    
+    function typeWriter() {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100); // Vitesse de frappe (100ms par lettre)
+        }
+    }
+    
+    // On lance l'écriture
+    typeWriter();
+});
+</script>
 
 <script>
 (function() {
