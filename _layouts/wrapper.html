@@ -24,6 +24,22 @@
 </head>
 
 <body>
+  <script>
+  /* SCRIPT D'URGENCE : TUEUR DE SERVICE WORKER */
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.unregister();
+        console.log("Service Worker désactivé pour éviter les bugs 💀");
+      }
+    });
+    // Force un rechargement unique pour être sûr que le site s'affiche
+    if(!sessionStorage.getItem('reloaded_fix')) {
+        sessionStorage.setItem('reloaded_fix', 'true');
+        window.location.reload();
+    }
+  }
+  </script>
   {% include navbar.html %}
 
   <div class="page">
