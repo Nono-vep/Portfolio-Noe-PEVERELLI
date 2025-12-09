@@ -61,8 +61,9 @@
         align-items: center; 
         justify-content: space-between;
         gap: 30px; 
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
+
     .hero-section .text { flex: 1; }
 
     /* TITRE FORCE */
@@ -73,7 +74,7 @@
         margin-bottom: 20px !important;
     }
 
-    /* TYPEWRITER (Machine à écrire) */
+    /* TYPEWRITER (Ajusté à 9.5ch pour ton nom) */
     .typewriter {
         display: inline-block;
         overflow: hidden; 
@@ -83,7 +84,7 @@
         width: 0;
         animation: typing 1.5s steps(13, end) forwards, blink-caret .75s step-end infinite;
     }
-    @keyframes typing { from { width: 0 } to { width: 12ch; } }
+    @keyframes typing { from { width: 0 } to { width: 9.5ch; } }
     @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #333; } }
 
     /* 2. IMAGE (300px Rond parfait) */
@@ -111,35 +112,15 @@
     .oscillo-container {
         position: relative; width: 100%; height: 200px; 
         background-color: #ffffff; overflow: hidden; border-bottom: 1px solid #e0e0e0;
-        margin-top: 60px; z-index: 1; 
+        margin-top: 40px; z-index: 1; 
     }
     canvas#oscilloCanvas { display: block; width: 100%; height: 100%; }
 
-    /* =========================================
-       FIX MOBILE : C'est ici que la magie opère
-       ========================================= */
+    /* FIX MOBILE */
     @media (max-width: 768px) {
-        /* Force le texte à s'afficher normalement (bloc) et pas à l'envers */
-        .hero-section .text h2 {
-            display: block !important;
-            flex-direction: row !important; 
-        }
-        
-        /* Ajuste la taille du titre sur mobile pour que ça rentre */
-        .hero-section .text h2 {
-            font-size: 35px !important;
-        }
-
-        /* On s'assure que la photo passe au dessus du texte (standard mobile) */
-        .hero-section .group {
-            flex-direction: column-reverse !important;
-            text-align: center;
-        }
-
-        /* On centre le typewriter sur mobile */
-        .typewriter {
-            margin: 0 auto;
-        }
+        .hero-section .text h2 { display: block !important; flex-direction: row !important; font-size: 35px !important; }
+        .hero-section .group { flex-direction: column-reverse !important; text-align: center; }
+        .typewriter { margin: 0 auto; }
     }
 </style>
 
@@ -200,96 +181,40 @@
         requestAnimationFrame(animate);
     }
     animate();
-
-    // === DEBUT DU CODE EASTER EGG (À COLLER ICI) ===
-    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-    let cursor = 0;
-
-    document.addEventListener('keydown', (e) => {
-        // On vérifie si la touche appuyée correspond à la suite du code
-        if (e.key === konamiCode[cursor]) {
-            cursor++;
-            if (cursor === konamiCode.length) {
-                activateEasterEgg();
-                cursor = 0;
-            }
-        } else {
-            cursor = 0; // Si on se trompe, on recommence à zéro
-        }
-    });
-
-    function activateEasterEgg() {
-        alert("🎮 CHEAT CODE ACTIVÉ : Mode Ingénieur !");
-        
-        // Fait tourner la photo de profil
-        const img = document.querySelector('.headshot img');
-        if(img) {
-            img.style.transition = "transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"; // Effet rebond
-            img.style.transform = "rotate(360deg) scale(1.2)";
-            
-            // Change la couleur de l'oscilloscope en rouge temporairement
-            const oldColor = ctx.strokeStyle;
-            ctx.strokeStyle = '#ff0000';
-            
-            setTimeout(() => {
-                img.style.transform = "rotate(0deg) scale(1)";
-                ctx.strokeStyle = '#0056b3'; // Remet le bleu
-            }, 2000);
-        }
-    }
-    // === FIN DU CODE EASTER EGG ===
-
 })();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
 <script>
 (function() {
-    // Séquence : Haut, Haut, Bas, Bas, Gauche, Droite, Gauche, Droite, b, a
     const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
     let cursor = 0;
 
     document.addEventListener('keydown', function(e) {
-        // On compare la touche (insensible à la casse)
         if (e.key.toLowerCase() === konamiCode[cursor].toLowerCase()) {
             cursor++;
             if (cursor === konamiCode.length) {
                 activateEasterEgg();
-                cursor = 0; // Reset
+                cursor = 0; 
             }
         } else {
-            cursor = 0; // Erreur, reset
+            cursor = 0; 
         }
     });
 
-    // La fonction qui lance tout le spectacle
     function activateEasterEgg() {
-        // On enlève l'alerte moche, place au show !
-
-        // --- EFFET 1 : LA PHOTO TOURNE ---
         const img = document.querySelector('.headshot img');
         if(img) {
             img.style.transition = "transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
-            // Rotation + léger zoom
             img.style.transform = "rotate(720deg) scale(1.2)"; 
-            
-            setTimeout(function() {
-                img.style.transform = "rotate(0deg) scale(1)";
-            }, 2500);
+            setTimeout(function() { img.style.transform = "rotate(0deg) scale(1)"; }, 2500);
         }
-
-        // --- EFFET 2 : EXPLOSION DE CONFETTIS ---
-        // On définit une fonction pour tirer des canons depuis les côtés
         function fireCannon(particleRatio, opts) {
             confetti(Object.assign({}, {
-                particleCount: Math.floor(200 * particleRatio), // Beaucoup de particules
-                spread: 70,
-                origin: { y: 0.6 } // Tire depuis le bas-milieu de l'écran
+                particleCount: Math.floor(200 * particleRatio),
+                spread: 70, origin: { y: 0.6 }
             }, opts));
         }
-
-        // On lance plusieurs salves pour un effet réaliste
         fireCannon(0.25, { spread: 26, startVelocity: 55 });
         fireCannon(0.2, { spread: 60 });
         fireCannon(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
@@ -302,11 +227,7 @@
 <script>
 (function() {
     let docTitle = document.title;
-    window.addEventListener("blur", () => {
-        document.title = "Come back! ⚡"; // Change le titre quand on part
-    });
-    window.addEventListener("focus", () => {
-        document.title = docTitle; // Remet le titre normal quand on revient
-    });
+    window.addEventListener("blur", () => { document.title = "Come back! ⚡"; });
+    window.addEventListener("focus", () => { document.title = docTitle; });
 })();
 </script>
