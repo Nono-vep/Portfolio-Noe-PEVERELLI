@@ -3,7 +3,9 @@
         <div class="text">
             <h2>
                 I'm <br>
-                <span id="typewriter-text" class="typewriter" data-text="{{ site.name }}"></span>
+                <span class="typewriter-container">
+                    <span id="typewriter-text"></span><span class="cursor"></span>
+                </span>
                 
                 {% if site.external-links %}
                 <span class="external-links">
@@ -73,21 +75,25 @@
         margin-bottom: 20px !important;
     }
 
-    /* === TYPEWRITER STABLE (JS) === */
-    .typewriter {
+    /* === NOUVEAU STYLE TYPEWRITER ROBUSTE === */
+    .typewriter-container {
+        display: inline-flex; /* Colle les éléments */
+        align-items: baseline; /* Aligne sur la ligne de texte */
+    }
+    
+    /* Le Curseur Physique */
+    .cursor {
         display: inline-block;
-        /* Plus de width ni d'animation de largeur ici */
-        border-right: .15em solid #333; /* Le curseur */
-        white-space: nowrap; 
-        margin: 0;
-        /* Seul le clignotement est géré par CSS */
-        animation: blink-caret .75s step-end infinite;
-        min-height: 1em; /* Empêche le saut de ligne au chargement */
+        width: 3px; /* Épaisseur du curseur */
+        height: 1em; /* Hauteur relative à la police */
+        background-color: #333; /* Couleur noire */
+        margin-left: 2px; /* Petit espace esthétique */
+        animation: blink 1s step-end infinite;
     }
 
-    @keyframes blink-caret { 
-        from, to { border-color: transparent } 
-        50% { border-color: #333; } 
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 
     /* 2. IMAGE (300px Rond parfait) */
@@ -123,27 +129,31 @@
     @media (max-width: 768px) {
         .hero-section .text h2 { display: block !important; flex-direction: row !important; font-size: 35px !important; }
         .hero-section .group { flex-direction: column-reverse !important; text-align: center; }
-        .typewriter { margin: 0 auto; }
+        
+        /* Centrage du titre sur mobile */
+        .typewriter-container { justify-content: center; }
     }
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+    // Le texte à écrire
+    const textToType = "{{ site.name }}"; 
     const element = document.getElementById("typewriter-text");
-    const text = element.getAttribute("data-text");
-    element.innerHTML = ""; // On vide le texte initial
-    let index = 0;
     
-    function typeWriter() {
-        if (index < text.length) {
-            element.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 100); // Vitesse de frappe (100ms par lettre)
+    element.innerHTML = ""; // On vide au cas où
+    let i = 0;
+    
+    function type() {
+        if (i < textToType.length) {
+            element.innerHTML += textToType.charAt(i);
+            i++;
+            setTimeout(type, 100); // Vitesse de frappe
         }
     }
     
-    // On lance l'écriture
-    typeWriter();
+    // Petit délai avant de commencer pour faire joli
+    setTimeout(type, 500);
 });
 </script>
 
