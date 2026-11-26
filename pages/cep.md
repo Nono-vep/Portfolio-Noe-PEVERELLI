@@ -13,7 +13,6 @@ I am a second-year apprentice engineer (M1 FISA, 3EA department, INP-ENSEEIHT) a
   <a href="#slides">Slides</a>
   <a href="#poster">Poster</a>
   <a href="#international-mobility-2027-2028">Mobility 2027–2028</a>
-  <a href="#revue-de-presse">Revue de Presse</a>
   <a href="#linkedin">LinkedIn</a>
 </div>
 
@@ -97,22 +96,6 @@ My plan: 12 weeks abroad in 2027, preferably in the European Union (Spain, Germa
 </ul>
 
 Same destination in my CV, my cover letter and this page.
-
----
-
-## Revue de Presse — aircraft electrification {#revue-de-presse}
-
-**Theme:** the electrification of aircraft (all-electric and hybrid) as a lever to decarbonise air transport.
-
-**Research question:** to what extent can the electrification of aviation, driven by governments and manufacturers but limited by battery physics and certification, decarbonise air transport?
-
-1. Viswanathan, V., Epstein, A. H., Chiang, Y.-M., Takeuchi, E., Bradley, M., Langford, J., & Winter, M. (2022, January 26). The challenges and opportunities of battery-powered flight. *Nature*, 601, 519–525. <https://doi.org/10.1038/s41586-021-04139-1>
-2. U.S. Government Accountability Office (2026, May 27). *Electric aircraft: FAA is evaluating designs for certification and considering long-term regulatory approaches* (GAO-26-107816). <https://www.gao.gov/products/gao-26-107816>
-3. Gouvernement français (2025, October 3). *Avion électrique, à hydrogène décarboné, carburant durable : la révolution est-elle en vol ?* info.gouv.fr. <https://www.info.gouv.fr/actualite/avion-electrique-a-hydrogene-decarbone-carburant-durable-la-revolution-est-elle-en-vol>
-4. Biget, S. (2025, February 5). *Cocorico : le tout premier moteur électrique d'aviation certifié est français !* Futura-Sciences. <https://www.futura-sciences.com/tech/actualites/tech-cocorico-tout-premier-moteur-electrique-aviation-certifie-francais-119395/>
-5. Manac'h, E. (2025, June 18). *Pourquoi l'avion électrique est un mirage*. Reporterre. <https://reporterre.net/Pourquoi-l-avion-electrique-est-un-mirage>
-
-All documents accessed on 27 October 2026.
 
 ---
 
