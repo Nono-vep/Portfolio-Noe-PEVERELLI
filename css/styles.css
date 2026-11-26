@@ -222,6 +222,21 @@ nav .mobile-nav {
     color: var(--text-color);
 }
 
+/* "My Career Evolution Plan" button: filled, so the jury sees it first */
+.hero-section .text .links a.cep-button {
+    background-color: var(--link-color);
+}
+
+.hero-section .text .links a.cep-button i,
+.hero-section .text .links a.cep-button span {
+    color: #fff;
+}
+
+.hero-section .text .links a.cep-button:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+}
+
 .hero-section .headshot {
     flex: 3;
     display: flex;
