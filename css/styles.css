@@ -1065,6 +1065,9 @@ footer p {
     background-color: rgba(0,0,0,0.3); /* Petit fond gris pour qu'on les voie toujours */
     font-weight: bold;
     font-size: 18px;
+    font-family: inherit;
+    line-height: 1;
+    border: none;
     transition: 0.3s ease;
     user-select: none;
     z-index: 10;

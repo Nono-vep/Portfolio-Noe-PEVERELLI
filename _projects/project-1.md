@@ -77,8 +77,8 @@ As a result, the kart could not be driven on the track, but we validated the ele
       <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.png" style="width:100%">
   </div>
   
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <button type="button" class="prev" aria-label="Previous photo">&#10094;</button>
+  <button type="button" class="next" aria-label="Next photo">&#10095;</button>
 </div>
 
 

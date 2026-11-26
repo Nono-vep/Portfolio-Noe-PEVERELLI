@@ -33,36 +33,7 @@
     animation: signalMove 1.5s linear infinite;
 }
 @keyframes signalMove { 0% {transform: translateX(0);} 100% {transform: translateX(-80px);} }
-
-/* CSS Carrousel */
-.carousel-container { position: relative; max-width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 1rem;}
-.carousel-slide { display: none; }
-.carousel-slide img { width: 100%; display: block; }
-.carousel-slide:first-child { display: block; } 
-.prev, .next {
-    cursor: pointer; position: absolute; top: 50%; width: auto; padding: 10px;
-    margin-top: -22px; color: white; font-weight: bold; font-size: 18px;
-    background-color: rgba(0,0,0,0.3); user-select: none;
-}
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
 </style>
-
-<script>
-/* JS Carrousel */
-let slideIndex = 1;
-// Fonctions globales
-window.plusSlides = function(n) { showSlides(slideIndex += n); }
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("carousel-slide");
-  if (slides.length === 0) return;
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  slides[slideIndex-1].style.display = "block";  
-}
-</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
