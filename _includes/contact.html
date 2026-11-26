@@ -6,13 +6,13 @@
       
         <form action="{{site.formspree-key}}" method="POST">
             <label for="name">Name</label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name" autocomplete="name">
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" autocomplete="email" required>
 
             <label for="message">Message</label>
-            <textarea id="message" cols = "30" rows="10" name="message"></textarea>
+            <textarea id="message" cols="30" rows="10" name="message" required></textarea>
 
             <button type="submit">Send Message</button>
         </form>
@@ -37,9 +37,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 
 <script>
     // Configuration de l'apparition avec RESET: TRUE
