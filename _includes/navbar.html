@@ -24,9 +24,16 @@
     <a href="{{ site.baseurl }}/cep/">
         <span>CEP</span>
     </a>
-    <a href="{{ site.baseurl }}{{ site.resume-url }}" target="_blank" rel="noopener noreferrer">
-        <span>Resume</span>
-    </a>
+    <!-- "CV" entry with a submenu: hover, click/tap and keyboard (see assets/js/script.js) -->
+    <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="cv-menu">
+            <span>CV</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="nav-dropdown-menu" id="cv-menu">
+            <a href="{{ site.baseurl }}{{ site.resume-url }}" target="_blank" rel="noopener noreferrer"><span>CV in English</span></a>
+            <a href="{{ site.baseurl }}{{ site.resume-url-fr }}" target="_blank" rel="noopener noreferrer"><span>CV in French</span></a>
+        </div>
+    </div>
 </div>
 
 
@@ -56,7 +63,10 @@
             <span>CEP</span>
         </a>
         <a href="{{ site.baseurl }}{{ site.resume-url }}" target="_blank" rel="noopener noreferrer">
-            <span>Resume</span>
+            <span>CV in English</span>
+        </a>
+        <a href="{{ site.baseurl }}{{ site.resume-url-fr }}" target="_blank" rel="noopener noreferrer">
+            <span>CV in French</span>
         </a>
     </div>
 </nav>

@@ -88,7 +88,7 @@ nav .right a {
     white-space: nowrap;
 }
 
-nav .right a:last-child
+nav .right > a:last-child
  {
     border: 2px solid var(--link-color);
     color: var(--link-color);
@@ -96,13 +96,101 @@ nav .right a:last-child
     border-radius: 10px;
 }
 
-nav .right a:last-child:hover,
+nav .right > a:last-child:hover,
 nav .right a span:last-child:hover,
 nav .mobile-nav a:last-child:hover,
 nav .mobile-nav a span:last-child:hover {
     color: var(--text-color);
     background-color: var(--light-background-color);
     border-radius: 10px;
+}
+
+/* "CV" entry of the desktop menu and its submenu */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 22px;
+}
+
+.nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    font-size: 19px;
+    line-height: inherit;
+    color: var(--link-color);
+    background-color: transparent;
+    border: 2px solid var(--link-color);
+    border-radius: 10px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+
+.nav-dropdown-toggle span,
+.nav-dropdown-toggle i {
+    color: var(--link-color);
+}
+
+.nav-dropdown-toggle i {
+    font-size: 0.65em;
+    transition: transform 0.2s;
+}
+
+.nav-dropdown.open .nav-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown.open .nav-dropdown-toggle {
+    background-color: var(--light-background-color);
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 190px;
+    flex-direction: column;
+    padding: 6px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+}
+
+/* invisible bridge so the menu stays open while the mouse moves down to it */
+.nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    height: 10px;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    display: flex;
+}
+
+@media (hover: hover) {
+    .nav-dropdown:hover .nav-dropdown-menu {
+        display: flex;
+    }
+}
+
+nav .right .nav-dropdown-menu a {
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+nav .right .nav-dropdown-menu a:hover,
+nav .right .nav-dropdown-menu a:focus-visible {
+    background-color: var(--light-background-color);
 }
 
 /* Navbar Mobile Menu Button */
@@ -573,7 +661,9 @@ footer .links {
 footer .links a {
     color: var(--text-color);
     font-size: 20px;
-    margin: 0 30px;
+    margin: 0 22px;
+    display: inline-block;
+    white-space: nowrap; /* "CV in French" stays on one line */
 }
 
 footer .links a:hover {

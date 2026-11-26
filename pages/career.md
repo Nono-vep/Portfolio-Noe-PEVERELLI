@@ -24,13 +24,13 @@ As required for the international market, I maintain my CV in both English and F
   <div style="text-align: center;">
     <a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain.pdf" target="_blank" rel="noopener">
       <i class="fa-solid fa-file-pdf" style="font-size: 80px; color: #d93025;" aria-hidden="true"></i>
-      <p><strong>Resume in English</strong></p>
+      <p><strong>CV in English</strong></p>
     </a>
   </div>
   <div style="text-align: center;">
     <a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain_FR.pdf" target="_blank" rel="noopener">
       <i class="fa-solid fa-file-pdf" style="font-size: 80px; color: #d93025;" aria-hidden="true"></i>
-      <p><strong>Resume in French</strong></p>
+      <p><strong>CV in French</strong></p>
     </a>
   </div>
 </div>

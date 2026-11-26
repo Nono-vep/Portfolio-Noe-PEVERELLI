@@ -90,8 +90,8 @@ My plan: 12 weeks abroad in 2027, preferably in the European Union (Spain, Germa
 
 <ul class="doc-links">
   <li><a href="{{ site.baseurl }}/assets/cep/PEVERELLI_KOMPASS_Spain.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> KOMPASS target sheet</a></li>
-  <li><a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> CV (English)</a></li>
-  <li><a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain_FR.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> CV (French)</a></li>
+  <li><a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> CV in English</a></li>
+  <li><a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain_FR.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> CV in French</a></li>
   <li><a href="{{ site.baseurl }}/assets/cep/PEVERELLI_Letter_Spain.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Cover letter (English)</a></li>
   <li><a href="{{ site.baseurl }}/assets/cep/PEVERELLI_Lettre_Spain_FR.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Cover letter (French)</a></li>
 </ul>
