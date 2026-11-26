@@ -99,7 +99,7 @@ nav .right a:last-child
 nav .right a:last-child:hover,
 nav .right a span:last-child:hover,
 nav .mobile-nav a:last-child:hover,
-nav .mobile-nav a span:last-child:hover,{
+nav .mobile-nav a span:last-child:hover {
     color: var(--text-color);
     background-color: var(--light-background-color);
     border-radius: 10px;
@@ -380,6 +380,7 @@ nav .mobile-nav {
 }
 
 .project-card .read-more {
+    display: inline-block;
     background-color: transparent;
     border: none;
     color: var(--highlight-color);
@@ -603,6 +604,30 @@ footer p {
 
 
 
+
+
+/* IMAGE GALLERY MODES (merged from the former css/styles-images) */
+
+/* Default mode = cover */
+.image-gallery img.cover {
+  width: 100%;
+  height: var(--gallery-height, 300px);
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Full mode = whole image, no cropping */
+.image-gallery img.full {
+  width: auto;
+  max-width: 100%;
+  height: auto;           /* keeps the natural proportions */
+  object-fit: contain;    /* no crop */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
 
 /* PROJECT POST VIEW */
