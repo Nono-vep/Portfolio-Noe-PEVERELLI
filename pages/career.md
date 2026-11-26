@@ -7,6 +7,10 @@ description: "My professional identity: CVs, Elevator Pitch, and analysis of rol
 main-image: "Career.png"
 ---
 
+<p class="btn-row">
+  <a class="btn btn-primary" href="{{ site.baseurl }}/cep/">My Career Evolution Plan →</a>
+</p>
+
 ## Professional Identity
 
 Building a strong professional brand is essential for identifying the right opportunities. This section gathers the key tools I use to communicate my value to potential employers and partners.
