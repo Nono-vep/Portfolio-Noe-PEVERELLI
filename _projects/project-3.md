@@ -68,27 +68,27 @@ After designing the schematic and routing the PCB (Typon), we manufactured the b
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8106.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-3/IMG_8106.jpeg" alt="Outdoor test setup: solar panel, converter boards and measuring instruments" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8109.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-3/IMG_8109.jpeg" alt="Outdoor tests of the converter boards, with the solar vehicle in the background" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8131.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-3/IMG_8131.jpeg" alt="Full load test with the solar panel, the converter board and measuring instruments" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8145.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-3/IMG_8145.jpeg" alt="Converter board and bank of supercapacitors in an enclosure" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8602.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-3/IMG_8602.jpeg" alt="The small solar vehicle with its solar panel mounted on top" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-3/IMG_8603.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-3/IMG_8603.jpeg" alt="The solar vehicle on the test bench" style="width:100%">
     </div>
 
     <button type="button" class="prev" aria-label="Previous photo">&#10094;</button>

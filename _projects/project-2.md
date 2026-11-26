@@ -43,19 +43,19 @@ One of the most important parts of my work was the **sensitivity analysis**. I s
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5240.png" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-2/IMG_5240.png" alt="LTspice schematic of the series RLC circuit with a sweep of the resistance" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5241.png" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-2/IMG_5241.png" alt="Simulation: square input voltage and the resulting sinusoidal current" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5242.png" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-2/IMG_5242.png" alt="Simulated frequency response of the RLC circuit around the resonance frequency" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-2/IMG_5243.png" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-2/IMG_5243.png" alt="LTspice schematic comparing three RLC circuits with different component values" style="width:100%">
     </div>
 
     <button type="button" class="prev" aria-label="Previous photo">&#10094;</button>

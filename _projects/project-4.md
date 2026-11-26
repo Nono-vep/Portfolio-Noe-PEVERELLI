@@ -65,19 +65,19 @@ Once the PCB was manufactured, I soldered the components (including Surface Moun
 <div class="carousel-container">
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6191.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-4/IMG_6191.jpeg" alt="Test bench: the audio board wired to a breadboard, a power supply and an oscilloscope" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6352.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-4/IMG_6352.jpeg" alt="PCB layout of the audio processing card in Eagle" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6368.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-4/IMG_6368.jpeg" alt="Assembled audio card, component side, with the slide potentiometer" style="width:100%">
     </div>
 
     <div class="carousel-slide fade">
-        <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-4/IMG_6369.jpeg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/projects/project-4/IMG_6369.jpeg" alt="Assembled audio card, other side, with the op-amp socket" style="width:100%">
     </div>
 
     <button type="button" class="prev" aria-label="Previous photo">&#10094;</button>

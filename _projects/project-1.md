@@ -62,19 +62,19 @@ As a result, the kart could not be driven on the track, but we validated the ele
 
 <div class="carousel-container">
   <div class="carousel-slide fade">
-      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8853.jpeg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/projects/project-1/IMG_8853.jpeg" alt="The electric kart on a workshop trolley, with its four 12 V batteries" style="width:100%">
   </div>
   
   <div class="carousel-slide fade">
-      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8860.jpeg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/projects/project-1/IMG_8860.jpeg" alt="Control wiring of the kart in a transparent enclosure with terminal blocks" style="width:100%">
   </div>
   
   <div class="carousel-slide fade">
-      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_8899.jpeg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/projects/project-1/IMG_8899.jpeg" alt="Oscilloscope capture of the motor current and voltage on the test bench" style="width:100%">
   </div>
   
   <div class="carousel-slide fade">
-      <img src="/Portfolio-Noe-PEVERELLI/assets/images/projects/project-1/IMG_5140.png" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/projects/project-1/IMG_5140.png" alt="Power balance of the kart: battery, drive, induction motor and belt transmission" style="width:100%">
   </div>
   
   <button type="button" class="prev" aria-label="Previous photo">&#10094;</button>
