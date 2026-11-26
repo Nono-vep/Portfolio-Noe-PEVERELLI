@@ -22,14 +22,14 @@ As required for the international market, I maintain my CV in both English and F
 
 <div style="display: flex; justify-content: center; gap: 50px; margin: 40px 0;">
   <div style="text-align: center;">
-    <a href="/Portfolio-Noe-PEVERELLI/assets/resume/CV-Peverelli-Noe-English.pdf" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" width="80" alt="CV English">
+    <a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain.pdf" target="_blank" rel="noopener">
+      <i class="fa-solid fa-file-pdf" style="font-size: 80px; color: #d93025;" aria-hidden="true"></i>
       <p><strong>Resume in English</strong></p>
     </a>
   </div>
   <div style="text-align: center;">
-    <a href="/Portfolio-Noe-PEVERELLI/assets/resume/CV-Peverelli-Noe-French.pdf" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" width="80" alt="CV Français">
+    <a href="{{ site.baseurl }}/assets/resume/PEVERELLI_CV_Spain_FR.pdf" target="_blank" rel="noopener">
+      <i class="fa-solid fa-file-pdf" style="font-size: 80px; color: #d93025;" aria-hidden="true"></i>
       <p><strong>Resume in French</strong></p>
     </a>
   </div>
