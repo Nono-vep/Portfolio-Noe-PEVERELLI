@@ -71,9 +71,7 @@ My plan: 12 weeks abroad in 2027, preferably in the European Union (Spain, Germa
 
 {% include example-offer.html %}
 
-- **Back-up:** Infineon Technologies (Germany), power semiconductors, internships of three months or longer.
-- **To check:** CERN Summer Student Programme 2027 (Geneva), deadline 21 January 2027, only if my apprentice status counts as full-time student.
-- **Employer's written agreement:** next step, to be requested.
+I am also interested in a technical internship in another field, such as renewable energy, to learn other ways of working.
 
 ### My 5 keywords
 

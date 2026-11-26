@@ -1431,13 +1431,6 @@ footer p {
     color: var(--text-color);
 }
 
-.post-view .content .offer-box p.offer-note,
-.offer-box .offer-note {
-    margin: 10px 0 0;
-    font-size: 0.8em;
-    opacity: 0.75;
-}
-
 /* PDF links */
 .post-view .content ul.doc-links {
     list-style: none;

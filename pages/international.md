@@ -13,6 +13,8 @@ My plan: 12 weeks abroad in 2027, preferably in the European Union (Spain, Germa
 
 {% include example-offer.html %}
 
+I am also interested in a technical internship in another field, such as renewable energy, to learn other ways of working.
+
 <p class="btn-row">
   <a class="btn" href="{{ site.baseurl }}/cep/#international-mobility-2027-2028">My KOMPASS target sheet, CVs and cover letters on the CEP page →</a>
 </p>
